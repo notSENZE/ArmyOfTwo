@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>ArmyOfTwo.Prepatch</AssemblyName>
+    <RootNamespace>ArmyOfTwo.Prepatch</RootNamespace>
+    <Description>Registers the Army of Two bot types through MoreBotsAPI.</Description>
+    <LangVersion>latest</LangVersion>
+    <Configurations>Debug;Release</Configurations>
+    <SPTPath Condition="'$(SPTPath)' == ''">S:\SPT</SPTPath>
+    <PackageRoot>$(MSBuildProjectDirectory)\..\Build\BepInEx\patchers\ArmyOfTwo</PackageRoot>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp" Private="false">
+      <HintPath>$(SPTPath)\EscapeFromTarkov_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx" Private="false">
+      <HintPath>$(SPTPath)\BepInEx\core\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil" Private="false">
+      <HintPath>$(SPTPath)\BepInEx\core\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine" Private="false">
+      <HintPath>$(SPTPath)\EscapeFromTarkov_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule" Private="false">
+      <HintPath>$(SPTPath)\EscapeFromTarkov_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="MoreBotsPrepatch" Private="false">
+      <HintPath>..\References\MoreBotsPrepatch.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="BuildPackage" AfterTargets="Build">
+    <RemoveDir Directories="$(PackageRoot)" />
+    <MakeDir Directories="$(PackageRoot)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(PackageRoot)" />
+  </Target>
+</Project>
