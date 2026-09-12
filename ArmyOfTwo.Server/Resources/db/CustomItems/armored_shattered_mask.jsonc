@@ -1,0 +1,28 @@
+{
+  "a20f00000000000000000001": {
+    "itemTplToClone": "5b432b2f5acfc4771e1c6622",
+    "newName": "army_of_two_armored_shattered_mask",
+    "parentId": "5a341c4686f77469e155819e",
+    "overrideProperties": {
+      "armorClass": "6",
+      "Durability": 80,
+      "MaxDurability": 80,
+      "ExaminedByDefault": true,
+      "BackgroundColor": "violet"
+    },
+    "locales": {
+      "en": {
+        "name": "Army of Two armored mask",
+        "shortName": "AoT mask",
+        "description": "A reinforced Shattered lightweight armored mask worn by Rook and Tombstone. Protection class 6."
+      },
+      "de": {
+        "name": "Army of Two-Panzermaske",
+        "shortName": "AoT-Maske",
+        "description": "Eine verstärkte leichte Shattered-Panzermaske von Rook und Tombstone. Schutzklasse 6."
+      }
+    },
+    "registerInHandbook": false,
+    "registerInFleaPrices": false
+  }
+}
