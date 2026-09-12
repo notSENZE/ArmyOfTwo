@@ -1,0 +1,33 @@
+{
+  "type": "bossRook",
+  "presetBatch": 1,
+  "isBoss": true,
+  "mustHaveUniqueName": false,
+  "itemSpawnLimits": {},
+  "durability": {
+    "armor": {
+      "maxDelta": 0,
+      "minDelta": 0,
+      "minLimitPercent": 100,
+      "lowestMaxPercent": 100,
+      "highestMaxPercent": 100
+    },
+    "weapon": {
+      "highestMax": 100,
+      "lowestMax": 100,
+      "maxDelta": 0,
+      "minDelta": 0,
+      "minLimitPercent": 100
+    }
+  },
+  "equipment": {
+    "faceShieldIsActiveChancePercent": 100,
+    "forceOnlyArmoredRigWhenNoArmor": true,
+    "forceStock": true,
+    "laserIsActiveChancePercent": 75,
+    "lightIsActiveDayChancePercent": 25,
+    "lightIsActiveNightChancePercent": 75,
+    "nvgIsActiveChanceDayPercent": 10,
+    "nvgIsActiveChanceNightPercent": 90
+  }
+}
