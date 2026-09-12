@@ -1,0 +1,36 @@
+{
+  "spawns": {
+    "enabled": true,
+    "maps": {
+      "bigmap": {
+        "enabled": true,
+        "chance": 20,
+        "zones": ["ZoneScavBase"],
+        "disabledZones": []
+      },
+      "lighthouse": {
+        "enabled": true,
+        "chance": 20,
+        "zones": ["Zone_TreatmentContainers", "Zone_Chalet"],
+        "disabledZones": []
+      },
+      "shoreline": {
+        "enabled": true,
+        "chance": 20,
+        "zones": ["ZoneMeteoStation"],
+        "disabledZones": []
+      },
+      "woods": {
+        "enabled": true,
+        "chance": 20,
+        "zones": ["ZoneScavBase2"],
+        "disabledZones": []
+      }
+    }
+  },
+  "webUi": {
+    "enabled": true,
+    "host": "127.0.0.1",
+    "port": 6971
+  }
+}
