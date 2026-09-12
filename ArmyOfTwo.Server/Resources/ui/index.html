@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Army of Two · Operations Board</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <div class="brand-mark" aria-hidden="true"><span>02</span></div>
+      <div class="brand-copy">
+        <p class="eyebrow">SENZE // TACTICAL CONTROL</p>
+        <h1>Army of Two</h1>
+        <p>Operations Board <span id="version" class="version">loading</span></p>
+      </div>
+      <div id="connection" class="connection"><i></i> Connecting</div>
+    </header>
+
+    <section id="operators" class="operators" aria-label="Operator roster"></section>
+
+    <section class="command-bar">
+      <label class="master-switch">
+        <input id="globalEnabled" type="checkbox">
+        <span class="switch-ui"></span>
+        <span><b>Squad deployment</b><small>Master control for all maps</small></span>
+      </label>
+      <div class="command-actions">
+        <label class="search"><span>⌕</span><input id="mapSearch" type="search" placeholder="Filter maps"></label>
+        <button id="reload" class="button ghost">Discard changes</button>
+        <button id="save" class="button primary">Commit deployment</button>
+      </div>
+    </section>
+
+    <div class="section-heading">
+      <div><p class="eyebrow">DEPLOYMENT MATRIX</p><h2>Map assignments</h2></div>
+      <p id="summary" class="summary"></p>
+    </div>
+
+    <section id="mapGrid" class="map-grid" aria-live="polite"></section>
+
+    <footer>
+      <span>Changes are written to <code>config.jsonc</code> and applied to the next raid.</span>
+      <span id="status" role="status"></span>
+    </footer>
+  </main>
+
+  <template id="mapTemplate">
+    <article class="map-card">
+      <div class="map-card-top">
+        <div><p class="map-code"></p><h3></h3></div>
+        <label class="map-toggle"><input type="checkbox"><span></span></label>
+      </div>
+      <div class="chance-row">
+        <label>Spawn probability</label>
+        <output></output>
+      </div>
+      <div class="range-wrap">
+        <input class="chance-range" type="range" min="0" max="100" step="1">
+        <input class="chance-number" type="number" min="0" max="100" step="1">
+      </div>
+      <div class="zone-heading">
+        <button class="zone-disclosure" type="button"><span class="arrow">›</span> Spawn zones <b></b></button>
+        <div><button class="zone-all" type="button">All</button><button class="zone-none" type="button">None</button></div>
+      </div>
+      <div class="zones"></div>
+    </article>
+  </template>
+
+  <script src="/app.js"></script>
+</body>
+</html>

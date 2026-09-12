@@ -1,0 +1,214 @@
+const state = { config: null, field: null };
+const grid = document.getElementById("mapGrid");
+const status = document.getElementById("status");
+const saveButton = document.getElementById("save");
+
+document.getElementById("globalEnabled").addEventListener("change", event => {
+  state.config.enabled = event.target.checked;
+  updateSummary();
+});
+
+document.getElementById("reload").addEventListener("click", load);
+document.getElementById("save").addEventListener("click", save);
+document.getElementById("mapSearch").addEventListener("input", event => {
+  const term = event.target.value.trim().toLowerCase();
+  document.querySelectorAll(".map-card").forEach(card => {
+    card.classList.toggle("filtered", term && !card.dataset.search.includes(term));
+  });
+});
+
+function clamp(value) {
+  const number = Number(value);
+  return Math.max(0, Math.min(100, Number.isFinite(number) ? Math.round(number) : 0));
+}
+
+function normalizeMap(map, fieldMap, isNew) {
+  map.enabled = Boolean(map.enabled);
+  map.chance = clamp(map.chance ?? 20);
+  const available = Array.isArray(fieldMap.zones) ? fieldMap.zones : [];
+  const configured = Array.isArray(map.zones) ? map.zones : [];
+  const disabled = new Set((map.disabledZones || []).map(zone => zone.toLowerCase()));
+  let selected = configured.filter(zone => !disabled.has(zone.toLowerCase()));
+
+  if (configured.length === 0) {
+    selected = fieldMap.defaultZones.length ? fieldMap.defaultZones : available;
+  } else if (isNew) {
+    selected = available;
+  }
+
+  const selectedSet = new Set(selected.map(zone => zone.toLowerCase()));
+  map.zones = [...available];
+  map.disabledZones = available.filter(zone => !selectedSet.has(zone.toLowerCase()));
+  return map;
+}
+
+function hydrateConfig() {
+  state.config.maps ||= {};
+  state.field.maps.forEach(fieldMap => {
+    const isNew = !state.config.maps[fieldMap.id];
+    const map = state.config.maps[fieldMap.id] || { enabled: false, chance: 20, zones: [], disabledZones: [] };
+    state.config.maps[fieldMap.id] = normalizeMap(map, fieldMap, isNew);
+  });
+}
+
+function isZoneEnabled(map, zone) {
+  return !new Set(map.disabledZones.map(value => value.toLowerCase())).has(zone.toLowerCase());
+}
+
+function setZone(map, zone, enabled) {
+  const index = map.disabledZones.findIndex(value => value.toLowerCase() === zone.toLowerCase());
+  if (enabled && index >= 0) map.disabledZones.splice(index, 1);
+  if (!enabled && index < 0) map.disabledZones.push(zone);
+}
+
+function selectedZoneCount(map) {
+  return map.zones.filter(zone => isZoneEnabled(map, zone)).length;
+}
+
+function renderOperators() {
+  const host = document.getElementById("operators");
+  host.innerHTML = "";
+  state.field.operators.forEach((operator, index) => {
+    const card = document.createElement("article");
+    card.className = "operator";
+    card.dataset.index = String(index + 1).padStart(2, "0");
+    card.innerHTML = `<h2>${operator.name}</h2><p>${operator.role}</p><p class="weapon">${operator.weapon}</p>`;
+    host.appendChild(card);
+  });
+}
+
+function renderMaps() {
+  grid.innerHTML = "";
+  const template = document.getElementById("mapTemplate");
+
+  state.field.maps.forEach((fieldMap, index) => {
+    const map = state.config.maps[fieldMap.id];
+    const fragment = template.content.cloneNode(true);
+    const card = fragment.querySelector(".map-card");
+    const enabled = fragment.querySelector(".map-toggle input");
+    const range = fragment.querySelector(".chance-range");
+    const number = fragment.querySelector(".chance-number");
+    const output = fragment.querySelector("output");
+    const zoneHost = fragment.querySelector(".zones");
+    const zoneCount = fragment.querySelector(".zone-disclosure b");
+
+    card.dataset.map = fieldMap.id;
+    card.dataset.search = `${fieldMap.name} ${fieldMap.id}`.toLowerCase();
+    card.classList.toggle("active", map.enabled);
+    fragment.querySelector(".map-code").textContent = `AO-${String(index + 1).padStart(2, "0")} // ${fieldMap.id}`;
+    fragment.querySelector("h3").textContent = fieldMap.name;
+
+    enabled.checked = map.enabled;
+    enabled.addEventListener("change", () => {
+      map.enabled = enabled.checked;
+      card.classList.toggle("active", map.enabled);
+      updateSummary();
+    });
+
+    const setChance = value => {
+      map.chance = clamp(value);
+      range.value = map.chance;
+      number.value = map.chance;
+      output.textContent = `${map.chance}%`;
+    };
+    setChance(map.chance);
+    range.addEventListener("input", () => setChance(range.value));
+    number.addEventListener("input", () => setChance(number.value));
+
+    const updateZoneCount = () => {
+      zoneCount.textContent = `${selectedZoneCount(map)}/${map.zones.length}`;
+    };
+
+    if (map.zones.length === 0) {
+      zoneHost.innerHTML = '<p class="no-zones">No valid bot zones were found in the current SPT location data.</p>';
+    } else {
+      map.zones.forEach(zone => {
+        const label = document.createElement("label");
+        label.className = "zone";
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = isZoneEnabled(map, zone);
+        checkbox.addEventListener("change", () => {
+          setZone(map, zone, checkbox.checked);
+          updateZoneCount();
+        });
+        const name = document.createElement("span");
+        name.textContent = zone;
+        label.append(checkbox, name);
+        zoneHost.appendChild(label);
+      });
+    }
+
+    fragment.querySelector(".zone-disclosure").addEventListener("click", () => card.classList.toggle("open"));
+    fragment.querySelector(".zone-all").addEventListener("click", () => {
+      map.disabledZones = [];
+      zoneHost.querySelectorAll("input").forEach(input => input.checked = true);
+      updateZoneCount();
+    });
+    fragment.querySelector(".zone-none").addEventListener("click", () => {
+      map.disabledZones = [...map.zones];
+      zoneHost.querySelectorAll("input").forEach(input => input.checked = false);
+      updateZoneCount();
+    });
+
+    updateZoneCount();
+    grid.appendChild(fragment);
+  });
+}
+
+function updateSummary() {
+  const maps = Object.values(state.config.maps || {});
+  const active = maps.filter(map => map.enabled).length;
+  document.getElementById("summary").textContent = state.config.enabled
+    ? `${active} active assignment${active === 1 ? "" : "s"}`
+    : "All deployments suspended";
+}
+
+function setStatus(message, type = "") {
+  status.textContent = message;
+  status.className = type;
+}
+
+async function load() {
+  setStatus("Loading field data…");
+  try {
+    const [configResponse, fieldResponse] = await Promise.all([
+      fetch("/api/spawns"),
+      fetch("/api/field-data")
+    ]);
+    if (!configResponse.ok || !fieldResponse.ok) throw new Error("Server response failed");
+    state.config = await configResponse.json();
+    state.field = await fieldResponse.json();
+    hydrateConfig();
+    document.getElementById("version").textContent = `v${state.field.version}`;
+    document.getElementById("globalEnabled").checked = state.config.enabled;
+    document.getElementById("connection").classList.add("online");
+    document.getElementById("connection").lastChild.textContent = " Online";
+    renderOperators();
+    renderMaps();
+    updateSummary();
+    setStatus("Field data synchronized", "success");
+  } catch (error) {
+    setStatus(`Load failed: ${error.message}`, "error");
+  }
+}
+
+async function save() {
+  saveButton.disabled = true;
+  setStatus("Committing deployment…");
+  try {
+    const response = await fetch("/api/spawns", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(state.config)
+    });
+    if (!response.ok) throw new Error(await response.text());
+    setStatus("Deployment committed for the next raid", "success");
+  } catch (error) {
+    setStatus(`Save failed: ${error.message}`, "error");
+  } finally {
+    saveButton.disabled = false;
+  }
+}
+
+load();
