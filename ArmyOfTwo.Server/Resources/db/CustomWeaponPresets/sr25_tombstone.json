@@ -1,0 +1,148 @@
+{
+  "a20f00000000000000000201": {
+    "_changeWeaponName": true,
+    "_encyclopedia": "5df8ce05b11454561e39243b",
+    "_id": "a20f00000000000000000201",
+    "_items": [
+      {
+        "_id": "a20f00000000000000000210",
+        "_tpl": "5df8ce05b11454561e39243b",
+        "upd": {
+          "Repairable": {
+            "Durability": 100,
+            "MaxDurability": 100
+          }
+        }
+      },
+      {
+        "_id": "a20f00000000000000000211",
+        "_tpl": "57af48872459771f0b2ebf11",
+        "parentId": "a20f00000000000000000210",
+        "slotId": "mod_pistol_grip"
+      },
+      {
+        "_id": "a20f00000000000000000212",
+        "_tpl": "5df8f541c41b2312ea3335e3",
+        "parentId": "a20f00000000000000000210",
+        "slotId": "mod_magazine"
+      },
+      {
+        "_id": "a20f00000000000000000213",
+        "_tpl": "5649be884bdc2d79388b4577",
+        "parentId": "a20f00000000000000000210",
+        "slotId": "mod_stock"
+      },
+      {
+        "_id": "a20f00000000000000000214",
+        "_tpl": "5fc2369685fd526b824a5713",
+        "parentId": "a20f00000000000000000213",
+        "slotId": "mod_stock_000"
+      },
+      {
+        "_id": "a20f00000000000000000215",
+        "_tpl": "5df8e4080b92095fd441e594",
+        "parentId": "a20f00000000000000000210",
+        "slotId": "mod_reciever"
+      },
+      {
+        "_id": "a20f00000000000000000216",
+        "_tpl": "618bab21526131765025ab3f",
+        "parentId": "a20f00000000000000000215",
+        "slotId": "mod_scope"
+      },
+      {
+        "_id": "a20f00000000000000000217",
+        "_tpl": "618ba27d9008e4636a67f61d",
+        "parentId": "a20f00000000000000000216",
+        "slotId": "mod_scope"
+      },
+      {
+        "_id": "a20f00000000000000000218",
+        "_tpl": "618ba92152ecee1505530bd3",
+        "parentId": "a20f00000000000000000216",
+        "slotId": "mod_mount"
+      },
+      {
+        "_id": "a20f00000000000000000219",
+        "_tpl": "5a32aa8bc4a2826c6e06d737",
+        "parentId": "a20f00000000000000000218",
+        "slotId": "mod_scope"
+      },
+      {
+        "_id": "a20f00000000000000000220",
+        "_tpl": "5df917564a9f347bc92edca3",
+        "parentId": "a20f00000000000000000215",
+        "slotId": "mod_barrel"
+      },
+      {
+        "_id": "a20f00000000000000000221",
+        "_tpl": "6130c43c67085e45ef1405a1",
+        "parentId": "a20f00000000000000000220",
+        "slotId": "mod_muzzle"
+      },
+      {
+        "_id": "a20f00000000000000000222",
+        "_tpl": "5dfa3d2b0dee1b22f862eade",
+        "parentId": "a20f00000000000000000221",
+        "slotId": "mod_muzzle"
+      },
+      {
+        "_id": "a20f00000000000000000223",
+        "_tpl": "5dfa3d45dfc58d14537c20b0",
+        "parentId": "a20f00000000000000000220",
+        "slotId": "mod_gas_block"
+      },
+      {
+        "_id": "a20f00000000000000000224",
+        "_tpl": "5df916dfbb49d91fb446d6b9",
+        "parentId": "a20f00000000000000000215",
+        "slotId": "mod_handguard"
+      },
+      {
+        "_id": "a20f00000000000000000225",
+        "_tpl": "544909bb4bdc2d6f028b4577",
+        "parentId": "a20f00000000000000000224",
+        "slotId": "mod_tactical"
+      },
+      {
+        "_id": "a20f00000000000000000226",
+        "_tpl": "5dfa3d950dee1b22f862eae0",
+        "parentId": "a20f00000000000000000224",
+        "slotId": "mod_sight_front"
+      },
+      {
+        "_id": "a20f00000000000000000227",
+        "_tpl": "57cffcd624597763133760c5",
+        "parentId": "a20f00000000000000000224",
+        "slotId": "mod_foregrip"
+      },
+      {
+        "_id": "a20f00000000000000000228",
+        "_tpl": "671126b049e181972e0681fa",
+        "parentId": "a20f00000000000000000224",
+        "slotId": "mod_mount_002"
+      },
+      {
+        "_id": "a20f00000000000000000229",
+        "_tpl": "5888961624597754281f93f3",
+        "parentId": "a20f00000000000000000228",
+        "slotId": "mod_bipod"
+      },
+      {
+        "_id": "a20f00000000000000000230",
+        "_tpl": "5dfa3d7ac41b2312ea33362a",
+        "parentId": "a20f00000000000000000215",
+        "slotId": "mod_sight_rear"
+      },
+      {
+        "_id": "a20f00000000000000000231",
+        "_tpl": "5df8e085bb49d91fb446d6a8",
+        "parentId": "a20f00000000000000000210",
+        "slotId": "mod_charge"
+      }
+    ],
+    "_name": "SR-25 Tombstone",
+    "_parent": "a20f00000000000000000210",
+    "_type": "Preset"
+  }
+}
