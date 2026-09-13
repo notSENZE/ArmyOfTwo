@@ -1,0 +1,53 @@
+{
+  "a20f00000000000000000101": {
+    "_changeWeaponName": true,
+    "_encyclopedia": "5bb2475ed4351e00853264e3",
+    "_id": "a20f00000000000000000101",
+    "_items": [
+      {
+        "_id": "a20f00000000000000000110",
+        "_tpl": "5bb2475ed4351e00853264e3",
+        "upd": {
+          "Repairable": { "Durability": 100, "MaxDurability": 100 },
+          "FireMode": { "FireMode": "single" }
+        }
+      },
+      { "_id": "a20f00000000000000000111", "_tpl": "59db3a1d86f77429e05b4e92", "parentId": "a20f00000000000000000110", "slotId": "mod_pistol_grip" },
+      { "_id": "a20f00000000000000000112", "_tpl": "544a378f4bdc2d30388b4567", "parentId": "a20f00000000000000000110", "slotId": "mod_magazine" },
+      { "_id": "a20f00000000000000000113", "_tpl": "5bb20d53d4351e4502010a69", "parentId": "a20f00000000000000000110", "slotId": "mod_reciever" },
+      { "_id": "a20f00000000000000000114", "_tpl": "5c793fb92e221644f31bfb64", "parentId": "a20f00000000000000000110", "slotId": "mod_stock" },
+      { "_id": "a20f00000000000000000115", "_tpl": "5f633ff5c444ce7e3c30a006", "parentId": "a20f00000000000000000110", "slotId": "mod_charge" },
+      {
+        "_id": "a20f00000000000000000116", "_tpl": "58491f3324597764bc48fa02", "parentId": "a20f00000000000000000113", "slotId": "mod_scope",
+        "upd": { "Sight": { "ScopesCurrentCalibPointIndexes": [0], "ScopesSelectedModes": [0], "SelectedScope": 0, "ScopeZoomValue": 0 } }
+      },
+      { "_id": "a20f00000000000000000117", "_tpl": "5bb20d9cd4351e00334c9d8a", "parentId": "a20f00000000000000000113", "slotId": "mod_barrel" },
+      { "_id": "a20f00000000000000000118", "_tpl": "5bb20de5d4351e0035629e59", "parentId": "a20f00000000000000000113", "slotId": "mod_handguard" },
+      {
+        "_id": "a20f00000000000000000119", "_tpl": "5fb6564947ce63734e3fa1da", "parentId": "a20f00000000000000000113", "slotId": "mod_sight_rear",
+        "upd": { "Sight": { "ScopesCurrentCalibPointIndexes": [0], "ScopesSelectedModes": [0], "SelectedScope": 0, "ScopeZoomValue": 0 } }
+      },
+      { "_id": "a20f00000000000000000120", "_tpl": "5d135e83d7ad1a21b83f42d8", "parentId": "a20f00000000000000000114", "slotId": "mod_stock_000" },
+      { "_id": "a20f00000000000000000121", "_tpl": "56ea8180d2720bf2698b456a", "parentId": "a20f00000000000000000117", "slotId": "mod_muzzle" },
+      { "_id": "a20f00000000000000000122", "_tpl": "5bb20dcad4351e3bac1212da", "parentId": "a20f00000000000000000117", "slotId": "mod_gas_block" },
+      { "_id": "a20f00000000000000000123", "_tpl": "59f8a37386f7747af3328f06", "parentId": "a20f00000000000000000118", "slotId": "mod_foregrip" },
+      {
+        "_id": "a20f00000000000000000124", "_tpl": "5fb6567747ce63734e3fa1dc", "parentId": "a20f00000000000000000118", "slotId": "mod_sight_front",
+        "upd": { "Sight": { "ScopesCurrentCalibPointIndexes": [0], "ScopesSelectedModes": [0], "SelectedScope": 0, "ScopeZoomValue": 0 } }
+      },
+      {
+        "_id": "a20f00000000000000000125", "_tpl": "68bedc0365e7dcf94f0cb0fc", "parentId": "a20f00000000000000000118", "slotId": "mod_tactical_000",
+        "upd": { "Light": { "IsActive": true, "SelectedMode": 0 } }
+      },
+      { "_id": "a20f00000000000000000126", "_tpl": "6267c6396b642f77f56f5c1c", "parentId": "a20f00000000000000000118", "slotId": "mod_tactical_002" },
+      { "_id": "a20f00000000000000000127", "_tpl": "57da93632459771cb65bf83f", "parentId": "a20f00000000000000000121", "slotId": "mod_muzzle" },
+      {
+        "_id": "a20f00000000000000000128", "_tpl": "57d17c5e2459775a5c57d17d", "parentId": "a20f00000000000000000126", "slotId": "mod_flashlight",
+        "upd": { "Light": { "IsActive": true, "SelectedMode": 0 } }
+      }
+    ],
+    "_name": "HK416 Rook",
+    "_parent": "a20f00000000000000000110",
+    "_type": "Preset"
+  }
+}

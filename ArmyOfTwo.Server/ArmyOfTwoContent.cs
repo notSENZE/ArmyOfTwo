@@ -1,4 +1,5 @@
 using System.Reflection;
+using ArmyOfTwo.Server.Loadouts;
 using MoreBotsServer.Services;
 using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.DI;
@@ -10,6 +11,7 @@ public sealed class ArmyOfTwoContent(
     MoreBotsServer.MoreBotsAPI moreBots,
     MoreBotsCustomBotTypeService customBotTypeService,
     FactionService factionService,
+    ReserveAmmoPatch reserveAmmoPatch,
     WTTServerCommonLib.WTTServerCommonLib commonLib) : IOnLoad
 {
     public async Task OnLoadAsync(CancellationToken cancellationToken)
@@ -18,7 +20,9 @@ public sealed class ArmyOfTwoContent(
 
         await commonLib.CustomItemServiceExtended.CreateCustomItems(assembly);
         await commonLib.CustomWeaponPresetService.CreateCustomWeaponPresets(assembly);
+        await commonLib.CustomQuestService.CreateCustomQuests(assembly);
         await moreBots.LoadBots(assembly);
+        reserveAmmoPatch.Start();
 
         customBotTypeService.AddCustomWildSpawnTypeNames(new Dictionary<int, string>
         {

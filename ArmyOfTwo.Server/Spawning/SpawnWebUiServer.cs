@@ -209,7 +209,7 @@ public sealed class SpawnWebUiServer(
             maps,
             operators = new[]
             {
-                new { name = "Rook", role = "Lead · Close assault", weapon = "MPX · 9x19 PBP" },
+                new { name = "Rook", role = "Lead · Close assault", weapon = "HK416 · 5.56x45 M856A1" },
                 new { name = "Tombstone", role = "Overwatch · Marksman", weapon = "SR-25 · 7.62x51 M80" }
             }
         };

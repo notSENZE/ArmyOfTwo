@@ -1,0 +1,87 @@
+{
+  "6aa673267c3f9661de93cdd3": {
+    "itemTplToClone": "5b432b2f5acfc4771e1c6622",
+    "parentId": "5a341c4686f77469e155819e",
+    "handbookParentId": "5b47574386f77428ca22b32f",
+    "overrideProperties": {
+      "armorClass": 6,
+	  "armorColliders": [
+        "HeadCommon",
+        "Jaw",
+		"ParietalHead",
+		"Ears",
+        "Eyes"
+      ],
+	  "ArmorMaterial": "UHMWPE",
+      "BackgroundColor": "green",
+	  "BlocksHeadwear": false,
+      "CanRequireOnRagfair": false,
+      "CanSellOnRagfair": false,
+	  "ConflictingItems": [
+        "5c091a4e0db834001d5addc8",
+        "5c0e874186f7745dc7616606",
+        "66b5f65ca7f72d197e70bcd6",
+        "66b5f666cad6f002ab7214c2",
+        "66b5f661af44ca0014063c05",
+        "5b432b965acfc47a8774094e"
+      ],
+      "Durability": 100,
+      "MaxDurability": 100,
+	  "mousePenalty": -2,
+	  "RepairCost": 1245,
+	  "RicochetParams": {
+        "x": 0.9,
+        "y": 0.8,
+        "z": 80
+    },
+	  "speedPenaltyPercent": -1,
+	  "Weight": 2.2,
+	  "weaponErgonomicPenalty": -2.1
+	},
+    "locales": {
+      "en": {
+        "name": "Tombsones Armored Shattered Mask",
+        "shortName": "Tombstone Mask",
+        "description": "Tombstones mask."
+      }
+    },
+    "fleaPriceRoubles": 612548,
+    "handbookPriceRoubles": 74802,
+    "addtoBots": false,
+    "addtoModSlots": true,
+	"addtoInventorySlots": [
+	  "FaceCover"
+	],
+    "addtoStaticLootContainers": false,
+    "staticLootContainers": [
+      {
+        "probability": 99,
+        "containerName": "LOOTCONTAINER_DEAD_SCAV"
+      },
+      {
+        "probability": 99,
+        "containerName": "LOOTCONTAINER_DEAD_SCAV_4X4_2"
+      },
+      {
+        "probability": 99,
+        "containerName": "LOOTCONTAINER_PLASTIC_SUITCASE"
+      },
+      {
+        "probability": 99,
+        "containerName": "LOOTCONTAINER_PMC_BODY"
+      },
+      {
+        "probability": 99,
+        "containerName": "LOOTCONTAINER_SCAV_BODY"
+      },
+      {
+        "probability": 99,
+        "containerName": "LOOTCONTAINER_DUFFLE_BAG"
+      },
+      {
+        "probability": 99,
+        "containerName": "LOOTCONTAINER_DUFFLE_BAG_ADV"
+      }
+    ]
+  }
+}

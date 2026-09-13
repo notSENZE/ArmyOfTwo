@@ -6,7 +6,7 @@
     <OutputType>Library</OutputType>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>0.1.0</Version>
+    <Version>0.8.0</Version>
     <SPTPath Condition="'$(SPTPath)' == ''">S:\SPT</SPTPath>
     <PackageRoot>$(MSBuildProjectDirectory)\..\Build\SPT_Runtime\user\mods\ArmyOfTwo</PackageRoot>
   </PropertyGroup>
