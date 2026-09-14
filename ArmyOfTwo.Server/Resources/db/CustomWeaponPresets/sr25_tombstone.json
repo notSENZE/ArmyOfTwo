@@ -93,7 +93,7 @@
         "_id": "a20f00000000000000000221",
         "_tpl": "5b2388675acfc4771e1be0be",
         "parentId": "a20f00000000000000000217",
-        "slotId": "mod_scope_000",
+        "slotId": "mod_scope",
         "upd": {
           "Sight": {
             "ScopesCurrentCalibPointIndexes": [
