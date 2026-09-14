@@ -1,14 +1,14 @@
 {
-  "a20f41000000000000000001 name": "[TODO] Quest title",
-  "a20f41000000000000000001 description": "[TODO] Quest description",
-  "a20f41000000000000000001 startedMessageText": "[TODO] Quest accepted text",
-  "a20f41000000000000000001 successMessageText": "[TODO] Quest completed text",
-  "a20f41000000000000000003": "[TODO] Hand over Rook's mask (Found in Raid)",
-  "a20f41000000000000000004": "[TODO] Hand over Tombstone's mask (Found in Raid)",
-  "a20f41000000000000000005": "[TODO] Eliminate Rook on Shoreline",
-  "a20f41000000000000000009": "[TODO] Eliminate Rook on Ground Zero",
-  "a20f4100000000000000000d": "[TODO] Eliminate Rook on Streets of Tarkov",
-  "a20f41000000000000000011": "[TODO] Eliminate Tombstone on Shoreline",
-  "a20f41000000000000000015": "[TODO] Eliminate Tombstone on Ground Zero",
-  "a20f41000000000000000019": "[TODO] Eliminate Tombstone on Streets of Tarkov"
+  "a20f41000000000000000001 name": "Army of Two",
+  "a20f41000000000000000001 description": "Come in. Take a seat. We have a problem.\n\nThere are these two brothers: Rook and Tombstone. Nasty bastards. Highly trained elite soldiers. Tough, heavily armed, and not exactly easy to put down. Lately, they've been getting in my way more and more, and they're starting to become bad for business.\n\nWe need them gone. The sooner, the better.\n\nBut there's something else. Both of them wear some unusually durable facial armor. I've never seen anything quite like it, and I want to know how it's made.\n\nTake care of the brothers and bring me their face armor.",
+  "a20f41000000000000000001 startedMessageText": "Be careful out there.",
+  "a20f41000000000000000001 successMessageText": "You... you did it? Good job. Here's your reward.",
+  "a20f41000000000000000003": "Hand over Rook's mask (Found in Raid)",
+  "a20f41000000000000000004": "Hand over Tombstone's mask (Found in Raid)",
+  "a20f41000000000000000005": "Eliminate Rook on Shoreline",
+  "a20f41000000000000000009": "Eliminate Rook on Ground Zero",
+  "a20f4100000000000000000d": "Eliminate Rook on Streets of Tarkov",
+  "a20f41000000000000000011": "Eliminate Tombstone on Shoreline",
+  "a20f41000000000000000015": "Eliminate Tombstone on Ground Zero",
+  "a20f41000000000000000019": "Eliminate Tombstone on Streets of Tarkov"
 }
