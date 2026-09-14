@@ -47,9 +47,9 @@ public sealed class ReserveAmmoPatch : AbstractPatch
         var role = botGenerationDetails.RoleLowercase;
         var reserve = role switch
         {
-            "bossrook" => (AmmoTpl: RookAmmoTpl, StackSize: 60),
-            "followertombstone" => (AmmoTpl: TombstoneAmmoTpl, StackSize: 40),
-            _ => (AmmoTpl: string.Empty, StackSize: 0)
+            "bossrook" => (AmmoTpl: RookAmmoTpl, StackSize: 60, TotalRounds: 400),
+            "followertombstone" => (AmmoTpl: TombstoneAmmoTpl, StackSize: 40, TotalRounds: 220),
+            _ => (AmmoTpl: string.Empty, StackSize: 0, TotalRounds: 0)
         };
 
         if (reserve.StackSize == 0)
@@ -74,13 +74,17 @@ public sealed class ReserveAmmoPatch : AbstractPatch
             .Where(item => item.ParentId == secureContainer.Id.ToString() && item.Template.ToString() == reserve.AmmoTpl)
             .ToList();
 
-        foreach (var reserveStack in reserveStacks.Take(2))
+        var requiredStackCount = (int)Math.Ceiling((double)reserve.TotalRounds / reserve.StackSize);
+        var remainingRounds = reserve.TotalRounds;
+        foreach (var reserveStack in reserveStacks.Take(requiredStackCount))
         {
             reserveStack.Upd ??= new Upd();
-            reserveStack.Upd.StackObjectsCount = reserve.StackSize;
+            var stackRounds = Math.Min(reserve.StackSize, remainingRounds);
+            reserveStack.Upd.StackObjectsCount = stackRounds;
+            remainingRounds -= stackRounds;
         }
 
-        foreach (var extraStack in reserveStacks.Skip(2))
+        foreach (var extraStack in reserveStacks.Skip(requiredStackCount))
         {
             items.Remove(extraStack);
         }
