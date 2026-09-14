@@ -17,7 +17,7 @@ public sealed class SainRegistration(SainInteropRegistration sainInterop) : IOnL
             Name = "Rook",
             Section = "Army of Two",
             Description = "The aggressive leader of Army of Two.",
-            DifficultyModifier = 1f,
+            DifficultyModifier = 1.15f,
             BaseBrain = "Knight",
             BrainsToApply = ["Knight"]
         });
@@ -29,7 +29,7 @@ public sealed class SainRegistration(SainInteropRegistration sainInterop) : IOnL
             Name = "Tombstone",
             Section = "Army of Two",
             Description = "Rook's ranged support specialist.",
-            DifficultyModifier = 1f,
+            DifficultyModifier = 1.1f,
             BaseBrain = "BirdEye",
             BrainsToApply = ["BirdEye"]
         });

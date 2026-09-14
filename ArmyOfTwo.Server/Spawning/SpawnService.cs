@@ -69,6 +69,7 @@ public sealed class SpawnService(
             {
                 zones = knightSpawn.BossZone
                     .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+                    .Where(SpawnZoneRules.IsAllowed)
                     .Distinct(StringComparer.OrdinalIgnoreCase)
                     .ToList();
             }
@@ -92,8 +93,8 @@ public sealed class SpawnService(
             IsBossPlayer = false,
             BossZone = string.Join(',', zones),
             Delay = 0,
-            ForceSpawn = false,
-            IgnoreMaxBots = false,
+            ForceSpawn = chance >= 100,
+            IgnoreMaxBots = true,
             IsRandomTimeSpawn = false,
             SpawnMode = ["regular", "pve"],
             Supports = [],
@@ -114,7 +115,9 @@ public sealed class SpawnService(
             StringComparer.OrdinalIgnoreCase);
 
         return mapConfig.Zones
-            .Where(zone => !string.IsNullOrWhiteSpace(zone) && !disabledZones.Contains(zone))
+            .Where(zone => !string.IsNullOrWhiteSpace(zone)
+                && SpawnZoneRules.IsAllowed(zone)
+                && !disabledZones.Contains(zone))
             .Select(zone => zone.Trim())
             .Distinct(StringComparer.OrdinalIgnoreCase)
             .ToList();

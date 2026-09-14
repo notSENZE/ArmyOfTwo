@@ -1,5 +1,6 @@
 using System.Reflection;
 using System.Text.Json;
+using ArmyOfTwo.Server.Spawning;
 using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.Helpers.Server;
 
@@ -134,6 +135,7 @@ public sealed class ConfigService(ModHelper modHelper)
         return (zones ?? [])
             .Where(zone => !string.IsNullOrWhiteSpace(zone))
             .Select(zone => zone.Trim())
+            .Where(SpawnZoneRules.IsAllowed)
             .Distinct(StringComparer.OrdinalIgnoreCase)
             .OrderBy(zone => zone, StringComparer.OrdinalIgnoreCase)
             .ToList();

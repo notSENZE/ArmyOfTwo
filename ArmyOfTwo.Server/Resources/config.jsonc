@@ -5,25 +5,42 @@
       "bigmap": {
         "enabled": true,
         "chance": 20,
-        "zones": ["ZoneScavBase"],
+        "zones": [
+          "ZoneScavBase"
+        ],
         "disabledZones": []
       },
       "lighthouse": {
         "enabled": true,
         "chance": 20,
-        "zones": ["Zone_TreatmentContainers", "Zone_Chalet"],
+        "zones": [
+          "Zone_TreatmentContainers",
+          "Zone_Chalet"
+        ],
         "disabledZones": []
       },
       "shoreline": {
         "enabled": true,
         "chance": 20,
-        "zones": ["ZoneMeteoStation"],
+        "zones": [
+          "ZoneMeteoStation"
+        ],
+        "disabledZones": []
+      },
+      "sandbox": {
+        "enabled": true,
+        "chance": 20,
+        "zones": [
+          "ZoneSandbox"
+        ],
         "disabledZones": []
       },
       "woods": {
         "enabled": true,
         "chance": 20,
-        "zones": ["ZoneScavBase2"],
+        "zones": [
+          "ZoneScavBase2"
+        ],
         "disabledZones": []
       }
     }

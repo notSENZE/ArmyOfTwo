@@ -223,14 +223,24 @@ public sealed class SpawnWebUiServer(
             return [];
         }
 
-        return (location.Base.SpawnPointParams ?? [])
+        var zones = (location.Base.SpawnPointParams ?? [])
             .Select(point => point.BotZoneName)
             .OfType<string>()
             .Where(zone => !string.IsNullOrWhiteSpace(zone))
             .Select(zone => zone.Trim())
+            .Where(SpawnZoneRules.IsAllowed)
             .Distinct(StringComparer.OrdinalIgnoreCase)
             .OrderBy(zone => zone, StringComparer.OrdinalIgnoreCase)
             .ToList();
+
+        if (string.Equals(mapName, "sandbox", StringComparison.OrdinalIgnoreCase)
+            && !zones.Contains("ZoneSandbox", StringComparer.OrdinalIgnoreCase))
+        {
+            zones.Add("ZoneSandbox");
+            zones.Sort(StringComparer.OrdinalIgnoreCase);
+        }
+
+        return zones;
     }
 
     private List<string> GetDefaultZones(string mapName)
@@ -250,6 +260,7 @@ public sealed class SpawnWebUiServer(
             ? []
             : knightSpawn.BossZone
                 .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+                .Where(SpawnZoneRules.IsAllowed)
                 .Distinct(StringComparer.OrdinalIgnoreCase)
                 .ToList();
     }

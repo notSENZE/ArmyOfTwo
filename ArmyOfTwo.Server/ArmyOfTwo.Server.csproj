@@ -6,7 +6,7 @@
     <OutputType>Library</OutputType>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>0.8.1</Version>
+    <Version>0.8.5</Version>
     <SPTPath Condition="'$(SPTPath)' == ''">S:\SPT</SPTPath>
     <PackageRoot>$(MSBuildProjectDirectory)\..\Build\SPT_Runtime\user\mods\ArmyOfTwo</PackageRoot>
   </PropertyGroup>
@@ -25,6 +25,12 @@
     </Reference>
     <Reference Include="SAIN.ServerInterop" Private="false">
       <HintPath>$(SPTPath)\SPT_Runtime\user\mods\Solarint-SAIN-ServerMod\SAIN.ServerInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="SAIN.Preset.Shared" Private="false">
+      <HintPath>$(SPTPath)\SPT_Runtime\user\mods\Solarint-SAIN-ServerMod\SAIN.Preset.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="SAINServerMod" Private="false">
+      <HintPath>$(SPTPath)\SPT_Runtime\user\mods\Solarint-SAIN-ServerMod\SAINServerMod.dll</HintPath>
     </Reference>
     <ModResource Include="Resources\**\*" />
   </ItemGroup>

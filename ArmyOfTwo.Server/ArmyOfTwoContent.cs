@@ -19,6 +19,7 @@ public sealed class ArmyOfTwoContent(
         var assembly = Assembly.GetExecutingAssembly();
 
         await commonLib.CustomItemServiceExtended.CreateCustomItems(assembly);
+        await commonLib.CustomLocaleService.CreateCustomLocales(assembly);
         await commonLib.CustomWeaponPresetService.CreateCustomWeaponPresets(assembly);
         await commonLib.CustomQuestService.CreateCustomQuests(assembly);
         await moreBots.LoadBots(assembly);
