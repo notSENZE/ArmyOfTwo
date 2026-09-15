@@ -21,6 +21,7 @@ public sealed class SpawnWebUiServer(
         ("bigmap", "Customs"),
         ("factory4_day", "Factory · Day"),
         ("factory4_night", "Factory · Night"),
+        ("icebreaker", "Icebreaker"),
         ("interchange", "Interchange"),
         ("laboratory", "The Lab"),
         ("lighthouse", "Lighthouse"),
