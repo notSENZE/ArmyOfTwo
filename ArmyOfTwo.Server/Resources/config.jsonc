@@ -13,13 +13,17 @@
       "factory4_day": {
         "enabled": false,
         "chance": 20,
-        "zones": [],
+        "zones": [
+          "BotZone"
+        ],
         "disabledZones": []
       },
       "factory4_night": {
         "enabled": false,
         "chance": 20,
-        "zones": [],
+        "zones": [
+          "BotZone"
+        ],
         "disabledZones": []
       },
       "icebreaker": {
@@ -31,21 +35,54 @@
       "interchange": {
         "enabled": false,
         "chance": 20,
-        "zones": [],
+        "zones": [
+          "ZoneBearCamp",
+          "ZoneCenter",
+          "ZoneCenterBot",
+          "ZoneGoshan",
+          "ZoneIDEA",
+          "ZoneIDEAPark",
+          "ZoneOLI",
+          "ZoneOLIPark",
+          "ZonePowerStation",
+          "ZoneRoad",
+          "ZoneTagilla",
+          "ZoneTrucks"
+        ],
         "disabledZones": []
       },
       "laboratory": {
         "enabled": false,
         "chance": 20,
-        "zones": [],
+        "zones": [
+          "BotZoneBasement",
+          "BotZoneFloor1",
+          "BotZoneFloor2",
+          "BotZoneGate1",
+          "BotZoneGate2"
+        ],
         "disabledZones": []
       },
       "lighthouse": {
         "enabled": false,
         "chance": 20,
         "zones": [
+          "Zone_Blockpost",
+          "Zone_Bridge",
+          "Zone_Chalet",
+          "Zone_Containers",
+          "Zone_DestroyedHouse",
+          "Zone_Hellicopter",
+          "Zone_Island",
+          "Zone_LongRoad",
+          "Zone_Rocks",
+          "Zone_RoofBeach",
+          "Zone_RoofContainers",
+          "Zone_RoofRocks",
+          "Zone_TreatmentBeach",
           "Zone_TreatmentContainers",
-          "Zone_Chalet"
+          "Zone_TreatmentRocks",
+          "Zone_Village"
         ],
         "disabledZones": []
       },
@@ -68,7 +105,9 @@
       "sandbox_high": {
         "enabled": false,
         "chance": 20,
-        "zones": [],
+        "zones": [
+          "ZoneSandbox"
+        ],
         "disabledZones": []
       },
       "shoreline": {
@@ -82,14 +121,42 @@
       "tarkovstreets": {
         "enabled": false,
         "chance": 20,
-        "zones": [],
+        "zones": [
+          "ZoneCard1",
+          "ZoneCarShowroom",
+          "ZoneCinema",
+          "ZoneClimova",
+          "ZoneColumn",
+          "ZoneConcordiaParking",
+          "ZoneConcordia_1",
+          "ZoneConstruction",
+          "ZoneFactory",
+          "ZoneHotel_1",
+          "ZoneHotel_2",
+          "ZoneMvd",
+          "ZoneStilo",
+          "ZoneSW00",
+          "ZoneSW01"
+        ],
         "disabledZones": []
       },
       "woods": {
         "enabled": false,
         "chance": 20,
         "zones": [
-          "ZoneScavBase2"
+          "ZoneBigRocks",
+          "ZoneBrokenVill",
+          "ZoneClearVill",
+          "ZoneDepo",
+          "ZoneHighRocks",
+          "ZoneHouse",
+          "ZoneMiniHouse",
+          "ZoneRedHouse",
+          "ZoneRoad",
+          "ZoneScavBase2",
+          "ZoneStoneBunker",
+          "ZoneUsecBase",
+          "ZoneWoodCutter"
         ],
         "disabledZones": []
       }

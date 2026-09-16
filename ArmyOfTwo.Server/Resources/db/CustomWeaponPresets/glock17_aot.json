@@ -1,0 +1,85 @@
+{
+  "a20f00000000000000000501": {
+    "_changeWeaponName": true,
+    "_encyclopedia": "5a7ae0c351dfba0017554310",
+    "_id": "a20f00000000000000000501",
+    "_items": [
+      {
+        "_id": "a20f00000000000000000510",
+        "_tpl": "5a7ae0c351dfba0017554310",
+        "upd": {
+          "Repairable": {
+            "Durability": 100,
+            "MaxDurability": 100
+          },
+          "FireMode": {
+            "FireMode": "single"
+          }
+        }
+      },
+      {
+        "_id": "a20f00000000000000000511",
+        "_tpl": "5a6b5ed88dc32e000c52ec86",
+        "parentId": "a20f00000000000000000510",
+        "slotId": "mod_barrel"
+      },
+      {
+        "_id": "a20f00000000000000000512",
+        "_tpl": "5a7b4960e899ef197b331a2d",
+        "parentId": "a20f00000000000000000510",
+        "slotId": "mod_pistol_grip"
+      },
+      {
+        "_id": "a20f00000000000000000513",
+        "_tpl": "5a71e4f48dc32e001207fb26",
+        "parentId": "a20f00000000000000000510",
+        "slotId": "mod_reciever"
+      },
+      {
+        "_id": "a20f00000000000000000514",
+        "_tpl": "63076701a987397c0816d21b",
+        "parentId": "a20f00000000000000000510",
+        "slotId": "mod_magazine"
+      },
+      {
+        "_id": "a20f00000000000000000515",
+        "_tpl": "56def37dd2720bec348b456a",
+        "parentId": "a20f00000000000000000510",
+        "slotId": "mod_tactical",
+        "upd": {
+          "Light": {
+            "IsActive": true,
+            "SelectedMode": 0
+          }
+        }
+      },
+      {
+        "_id": "a20f00000000000000000516",
+        "_tpl": "5a7ad0c451dfba0013379712",
+        "parentId": "a20f00000000000000000511",
+        "slotId": "mod_muzzle"
+      },
+      {
+        "_id": "a20f00000000000000000517",
+        "_tpl": "68a5ac69b55a6b93c20a2bc7",
+        "parentId": "a20f00000000000000000513",
+        "slotId": "mod_scope",
+        "upd": {
+          "Sight": {
+            "ScopesCurrentCalibPointIndexes": [
+              0
+            ],
+            "ScopesSelectedModes": [
+              0
+            ],
+            "SelectedScope": 0,
+            "ScopeZoomValue": 0
+          }
+        }
+      }
+    ],
+    "_name": "Glock 17 AoT",
+    "_parent": "a20f00000000000000000510",
+    "_type": "Preset"
+  }
+}

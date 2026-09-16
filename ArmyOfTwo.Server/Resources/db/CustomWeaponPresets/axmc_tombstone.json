@@ -1,0 +1,168 @@
+{
+  "a20f00000000000000000401": {
+    "_changeWeaponName": true,
+    "_encyclopedia": "627e14b21713922ded6f2c15",
+    "_id": "a20f00000000000000000401",
+    "_items": [
+      {
+        "_id": "a20f00000000000000000410",
+        "_tpl": "627e14b21713922ded6f2c15",
+        "upd": {
+          "Repairable": {
+            "Durability": 100,
+            "MaxDurability": 100
+          },
+          "FireMode": {
+            "FireMode": "single"
+          }
+        }
+      },
+      {
+        "_id": "a20f00000000000000000411",
+        "_tpl": "628120fd5631d45211793c9f",
+        "parentId": "a20f00000000000000000410",
+        "slotId": "mod_magazine"
+      },
+      {
+        "_id": "a20f00000000000000000412",
+        "_tpl": "62811e2510e26c1f344e6554",
+        "parentId": "a20f00000000000000000410",
+        "slotId": "mod_pistol_grip",
+        "upd": {
+          "Foldable": {
+            "Folded": false
+          }
+        }
+      },
+      {
+        "_id": "a20f00000000000000000413",
+        "_tpl": "62811cd7308cb521f87a8f99",
+        "parentId": "a20f00000000000000000410",
+        "slotId": "mod_charge"
+      },
+      {
+        "_id": "a20f00000000000000000414",
+        "_tpl": "62811f828193841aca4a45c3",
+        "parentId": "a20f00000000000000000412",
+        "slotId": "mod_stock"
+      },
+      {
+        "_id": "a20f00000000000000000415",
+        "_tpl": "6281204f308cb521f87a8f9b",
+        "parentId": "a20f00000000000000000412",
+        "slotId": "mod_reciever"
+      },
+      {
+        "_id": "a20f00000000000000000416",
+        "_tpl": "6281209662cba23f6c4d7a19",
+        "parentId": "a20f00000000000000000415",
+        "slotId": "mod_handguard"
+      },
+      {
+        "_id": "a20f00000000000000000417",
+        "_tpl": "6281212a09427b40ab14e770",
+        "parentId": "a20f00000000000000000415",
+        "slotId": "mod_foregrip"
+      },
+      {
+        "_id": "a20f00000000000000000418",
+        "_tpl": "62811fbf09427b40ab14e767",
+        "parentId": "a20f00000000000000000415",
+        "slotId": "mod_reciever"
+      },
+      {
+        "_id": "a20f00000000000000000419",
+        "_tpl": "628120c21d5df4475f46a337",
+        "parentId": "a20f00000000000000000416",
+        "slotId": "mod_mount_000"
+      },
+      {
+        "_id": "a20f0000000000000000041a",
+        "_tpl": "628120dd308cb521f87a8fa1",
+        "parentId": "a20f00000000000000000416",
+        "slotId": "mod_mount_003"
+      },
+      {
+        "_id": "a20f0000000000000000041b",
+        "_tpl": "62811f461d5df4475f46a332",
+        "parentId": "a20f00000000000000000418",
+        "slotId": "mod_scope"
+      },
+      {
+        "_id": "a20f0000000000000000041c",
+        "_tpl": "628121434fa03b6b6c35dc6a",
+        "parentId": "a20f00000000000000000418",
+        "slotId": "mod_barrel"
+      },
+      {
+        "_id": "a20f0000000000000000041d",
+        "_tpl": "5c18b9192e2216398b5a8104",
+        "parentId": "a20f00000000000000000418",
+        "slotId": "mod_sight_rear",
+        "upd": {
+          "Sight": {
+            "ScopesCurrentCalibPointIndexes": [
+              0
+            ],
+            "ScopesSelectedModes": [
+              0
+            ],
+            "SelectedScope": 0,
+            "ScopeZoomValue": 0
+          }
+        }
+      },
+      {
+        "_id": "a20f0000000000000000041e",
+        "_tpl": "5c18b90d2e2216152142466b",
+        "parentId": "a20f00000000000000000419",
+        "slotId": "mod_sight_front",
+        "upd": {
+          "Sight": {
+            "ScopesCurrentCalibPointIndexes": [
+              0
+            ],
+            "ScopesSelectedModes": [
+              0
+            ],
+            "SelectedScope": 0,
+            "ScopeZoomValue": 0
+          }
+        }
+      },
+      {
+        "_id": "a20f0000000000000000041f",
+        "_tpl": "56ea70acd2720b844b8b4594",
+        "parentId": "a20f0000000000000000041b",
+        "slotId": "mod_scope",
+        "upd": {
+          "Sight": {
+            "ScopesCurrentCalibPointIndexes": [
+              0
+            ],
+            "ScopesSelectedModes": [
+              0
+            ],
+            "SelectedScope": 0,
+            "ScopeZoomValue": 0
+          }
+        }
+      },
+      {
+        "_id": "a20f00000000000000000420",
+        "_tpl": "62812081d23f207deb0ab216",
+        "parentId": "a20f0000000000000000041c",
+        "slotId": "mod_muzzle"
+      },
+      {
+        "_id": "a20f00000000000000000421",
+        "_tpl": "628120621d5df4475f46a335",
+        "parentId": "a20f00000000000000000420",
+        "slotId": "mod_muzzle"
+      }
+    ],
+    "_name": "AXMC Tombstone",
+    "_parent": "a20f00000000000000000410",
+    "_type": "Preset"
+  }
+}
