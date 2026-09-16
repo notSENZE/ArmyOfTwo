@@ -4,7 +4,7 @@
     <AssemblyName>ArmyOfTwo.Prepatch</AssemblyName>
     <RootNamespace>ArmyOfTwo.Prepatch</RootNamespace>
     <Description>Registers the Army of Two bot types through MoreBotsAPI.</Description>
-    <Version>0.8.5</Version>
+    <Version>0.9.0-beta.1</Version>
     <LangVersion>latest</LangVersion>
     <Configurations>Debug;Release</Configurations>
     <SPTPath Condition="'$(SPTPath)' == ''">S:\SPT</SPTPath>

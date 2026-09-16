@@ -3263,12 +3263,12 @@
   "skills": {
     "Common": {
       "BotReload": {
-        "max": 1500,
-        "min": 1200
+        "max": 5100,
+        "min": 5100
       },
       "BotSound": {
-        "max": 1600,
-        "min": 1200
+        "max": 5100,
+        "min": 5100
       },
       "Endurance": {
         "max": 5100,
