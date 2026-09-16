@@ -145,8 +145,7 @@
                 "dynamicLocale": false,
                 "id": "a20f4100000000000000000c",
                 "target": [
-                  "Sandbox",
-                  "Sandbox_high"
+                  "RezervBase"
                 ]
               }
             ],
@@ -203,7 +202,7 @@
                 "dynamicLocale": false,
                 "id": "a20f41000000000000000010",
                 "target": [
-                  "TarkovStreets"
+                  "Bigmap"
                 ]
               }
             ],
@@ -317,8 +316,7 @@
                 "dynamicLocale": false,
                 "id": "a20f41000000000000000018",
                 "target": [
-                  "Sandbox",
-                  "Sandbox_high"
+                  "RezervBase"
                 ]
               }
             ],
@@ -375,7 +373,7 @@
                 "dynamicLocale": false,
                 "id": "a20f4100000000000000001c",
                 "target": [
-                  "TarkovStreets"
+                  "Bigmap"
                 ]
               }
             ],

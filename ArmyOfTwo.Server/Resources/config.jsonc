@@ -10,13 +10,65 @@
         ],
         "disabledZones": []
       },
+      "factory4_day": {
+        "enabled": false,
+        "chance": 20,
+        "zones": [],
+        "disabledZones": []
+      },
+      "factory4_night": {
+        "enabled": false,
+        "chance": 20,
+        "zones": [],
+        "disabledZones": []
+      },
+      "icebreaker": {
+        "enabled": false,
+        "chance": 20,
+        "zones": [],
+        "disabledZones": []
+      },
+      "interchange": {
+        "enabled": false,
+        "chance": 20,
+        "zones": [],
+        "disabledZones": []
+      },
+      "laboratory": {
+        "enabled": false,
+        "chance": 20,
+        "zones": [],
+        "disabledZones": []
+      },
       "lighthouse": {
-        "enabled": true,
+        "enabled": false,
         "chance": 20,
         "zones": [
           "Zone_TreatmentContainers",
           "Zone_Chalet"
         ],
+        "disabledZones": []
+      },
+      "rezervbase": {
+        "enabled": true,
+        "chance": 20,
+        "zones": [
+          "ZoneBarrack"
+        ],
+        "disabledZones": []
+      },
+      "sandbox": {
+        "enabled": false,
+        "chance": 20,
+        "zones": [
+          "ZoneSandbox"
+        ],
+        "disabledZones": []
+      },
+      "sandbox_high": {
+        "enabled": false,
+        "chance": 20,
+        "zones": [],
         "disabledZones": []
       },
       "shoreline": {
@@ -27,16 +79,14 @@
         ],
         "disabledZones": []
       },
-      "sandbox": {
-        "enabled": true,
+      "tarkovstreets": {
+        "enabled": false,
         "chance": 20,
-        "zones": [
-          "ZoneSandbox"
-        ],
+        "zones": [],
         "disabledZones": []
       },
       "woods": {
-        "enabled": true,
+        "enabled": false,
         "chance": 20,
         "zones": [
           "ZoneScavBase2"

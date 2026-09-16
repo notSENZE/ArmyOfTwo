@@ -6,9 +6,9 @@
   "a20f41000000000000000003": "Hand over Rook's mask (Found in Raid)",
   "a20f41000000000000000004": "Hand over Tombstone's mask (Found in Raid)",
   "a20f41000000000000000005": "Eliminate Rook on Shoreline",
-  "a20f41000000000000000009": "Eliminate Rook on Ground Zero",
-  "a20f4100000000000000000d": "Eliminate Rook on Streets of Tarkov",
+  "a20f41000000000000000009": "Eliminate Rook on Reserve",
+  "a20f4100000000000000000d": "Eliminate Rook on Customs",
   "a20f41000000000000000011": "Eliminate Tombstone on Shoreline",
-  "a20f41000000000000000015": "Eliminate Tombstone on Ground Zero",
-  "a20f41000000000000000019": "Eliminate Tombstone on Streets of Tarkov"
+  "a20f41000000000000000015": "Eliminate Tombstone on Reserve",
+  "a20f41000000000000000019": "Eliminate Tombstone on Customs"
 }
