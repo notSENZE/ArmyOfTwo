@@ -228,7 +228,7 @@
         "ScatteringPerMeter": 0.045,
         "ShotgunFireDistancePref": 50,
         "VisibleAngle": 180.0,
-        "VisibleDistance": 170.4,
+        "VisibleDistance": 165,
         "WaitInCoverBetweenShotsSec": 1
       },
       "Cover": {
@@ -457,8 +457,8 @@
         "HOW_WORK_OVER_DEAD_BODY": 1,
         "LASTSEEN_POINT_CHOOSE_COEF": 0.2,
         "LAST_ENEMY_LOOK_TO": 40,
-        "MAX_AGGRO_BOT_DIST": 240.0,
-        "MAX_AGGRO_BOT_DIST_SQR": 57600.0,
+        "MAX_AGGRO_BOT_DIST": 180,
+        "MAX_AGGRO_BOT_DIST_SQR": 32400,
         "MAX_SHOOTS_TIME": 4,
         "MAX_START_AGGRESION_COEF": 3,
         "MEDS_ONLY_SAFE_CONTAINER": false,
@@ -485,13 +485,13 @@
         "SUSPETION_POINT_CHANCE_ADD100": 0,
         "TALK_WITH_QUERY": true,
         "TIME_TO_FIND_ENEMY": 17.6,
-        "TIME_TO_FORGOR_ABOUT_ENEMY_SEC": 124.8,
+        "TIME_TO_FORGOR_ABOUT_ENEMY_SEC": 90,
         "TIME_TO_RUN_TO_COVER_CAUSE_SHOOT_SEC": 15,
         "WARN_BOT_TYPES": []
       },
       "Move": {
         "BASESTART_SLOW_DIST": 1.1,
-        "BASE_ROTATE_SPEED": 324.0,
+        "BASE_ROTATE_SPEED": 270,
         "BASE_SQRT_START_SERACH": 1225,
         "BASE_START_SERACH": 35,
         "CHANCE_TO_RUN_IF_NO_AMMO_0_100": 100,
@@ -773,7 +773,7 @@
         "ScatteringPerMeter": 0.045,
         "ShotgunFireDistancePref": 50,
         "VisibleAngle": 180.0,
-        "VisibleDistance": 170.4,
+        "VisibleDistance": 165,
         "WaitInCoverBetweenShotsSec": 1
       },
       "Cover": {
@@ -1002,8 +1002,8 @@
         "HOW_WORK_OVER_DEAD_BODY": 1,
         "LASTSEEN_POINT_CHOOSE_COEF": 0.2,
         "LAST_ENEMY_LOOK_TO": 40,
-        "MAX_AGGRO_BOT_DIST": 240.0,
-        "MAX_AGGRO_BOT_DIST_SQR": 57600.0,
+        "MAX_AGGRO_BOT_DIST": 180,
+        "MAX_AGGRO_BOT_DIST_SQR": 32400,
         "MAX_SHOOTS_TIME": 4,
         "MAX_START_AGGRESION_COEF": 3,
         "MEDS_ONLY_SAFE_CONTAINER": false,
@@ -1030,13 +1030,13 @@
         "SUSPETION_POINT_CHANCE_ADD100": 0,
         "TALK_WITH_QUERY": true,
         "TIME_TO_FIND_ENEMY": 17.6,
-        "TIME_TO_FORGOR_ABOUT_ENEMY_SEC": 124.8,
+        "TIME_TO_FORGOR_ABOUT_ENEMY_SEC": 90,
         "TIME_TO_RUN_TO_COVER_CAUSE_SHOOT_SEC": 15,
         "WARN_BOT_TYPES": []
       },
       "Move": {
         "BASESTART_SLOW_DIST": 1.1,
-        "BASE_ROTATE_SPEED": 324.0,
+        "BASE_ROTATE_SPEED": 270,
         "BASE_SQRT_START_SERACH": 1225,
         "BASE_START_SERACH": 35,
         "CHANCE_TO_RUN_IF_NO_AMMO_0_100": 100,
@@ -1318,7 +1318,7 @@
         "ScatteringPerMeter": 0.045,
         "ShotgunFireDistancePref": 50,
         "VisibleAngle": 180.0,
-        "VisibleDistance": 170.4,
+        "VisibleDistance": 165,
         "WaitInCoverBetweenShotsSec": 1
       },
       "Cover": {
@@ -1547,8 +1547,8 @@
         "HOW_WORK_OVER_DEAD_BODY": 1,
         "LASTSEEN_POINT_CHOOSE_COEF": 0.2,
         "LAST_ENEMY_LOOK_TO": 40,
-        "MAX_AGGRO_BOT_DIST": 240.0,
-        "MAX_AGGRO_BOT_DIST_SQR": 57600.0,
+        "MAX_AGGRO_BOT_DIST": 180,
+        "MAX_AGGRO_BOT_DIST_SQR": 32400,
         "MAX_SHOOTS_TIME": 4,
         "MAX_START_AGGRESION_COEF": 3,
         "MEDS_ONLY_SAFE_CONTAINER": false,
@@ -1575,13 +1575,13 @@
         "SUSPETION_POINT_CHANCE_ADD100": 0,
         "TALK_WITH_QUERY": true,
         "TIME_TO_FIND_ENEMY": 17.6,
-        "TIME_TO_FORGOR_ABOUT_ENEMY_SEC": 124.8,
+        "TIME_TO_FORGOR_ABOUT_ENEMY_SEC": 90,
         "TIME_TO_RUN_TO_COVER_CAUSE_SHOOT_SEC": 15,
         "WARN_BOT_TYPES": []
       },
       "Move": {
         "BASESTART_SLOW_DIST": 1.1,
-        "BASE_ROTATE_SPEED": 324.0,
+        "BASE_ROTATE_SPEED": 270,
         "BASE_SQRT_START_SERACH": 1225,
         "BASE_START_SERACH": 35,
         "CHANCE_TO_RUN_IF_NO_AMMO_0_100": 100,
@@ -1863,7 +1863,7 @@
         "ScatteringPerMeter": 0.045,
         "ShotgunFireDistancePref": 50,
         "VisibleAngle": 180.0,
-        "VisibleDistance": 170.4,
+        "VisibleDistance": 165,
         "WaitInCoverBetweenShotsSec": 1
       },
       "Cover": {
@@ -2092,8 +2092,8 @@
         "HOW_WORK_OVER_DEAD_BODY": 1,
         "LASTSEEN_POINT_CHOOSE_COEF": 0.2,
         "LAST_ENEMY_LOOK_TO": 40,
-        "MAX_AGGRO_BOT_DIST": 240.0,
-        "MAX_AGGRO_BOT_DIST_SQR": 57600.0,
+        "MAX_AGGRO_BOT_DIST": 180,
+        "MAX_AGGRO_BOT_DIST_SQR": 32400,
         "MAX_SHOOTS_TIME": 4,
         "MAX_START_AGGRESION_COEF": 3,
         "MEDS_ONLY_SAFE_CONTAINER": false,
@@ -2120,13 +2120,13 @@
         "SUSPETION_POINT_CHANCE_ADD100": 0,
         "TALK_WITH_QUERY": true,
         "TIME_TO_FIND_ENEMY": 17.6,
-        "TIME_TO_FORGOR_ABOUT_ENEMY_SEC": 124.8,
+        "TIME_TO_FORGOR_ABOUT_ENEMY_SEC": 90,
         "TIME_TO_RUN_TO_COVER_CAUSE_SHOOT_SEC": 15,
         "WARN_BOT_TYPES": []
       },
       "Move": {
         "BASESTART_SLOW_DIST": 1.1,
-        "BASE_ROTATE_SPEED": 324.0,
+        "BASE_ROTATE_SPEED": 270,
         "BASE_SQRT_START_SERACH": 1225,
         "BASE_START_SERACH": 35,
         "CHANCE_TO_RUN_IF_NO_AMMO_0_100": 100,
@@ -3263,8 +3263,8 @@
   "skills": {
     "Common": {
       "BotReload": {
-        "max": 5100,
-        "min": 5100
+        "max": 2100,
+        "min": 2100
       },
       "BotSound": {
         "max": 5100,

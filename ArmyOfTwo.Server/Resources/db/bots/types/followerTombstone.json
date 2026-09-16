@@ -231,7 +231,7 @@
         "ScatteringPerMeter": 0.045,
         "ShotgunFireDistancePref": 50,
         "VisibleAngle": 180.0,
-        "VisibleDistance": 300.0,
+        "VisibleDistance": 250,
         "WaitInCoverBetweenShotsSec": 1
       },
       "Cover": {
@@ -460,8 +460,8 @@
         "HOLD_IF_PROTECT_DELTA_LAST_TIME_SEEN": 8.5,
         "LASTSEEN_POINT_CHOOSE_COEF": 0.2,
         "LAST_ENEMY_LOOK_TO": 40,
-        "MAX_AGGRO_BOT_DIST": 360.0,
-        "MAX_AGGRO_BOT_DIST_SQR": 129600.0,
+        "MAX_AGGRO_BOT_DIST": 240,
+        "MAX_AGGRO_BOT_DIST_SQR": 57600,
         "MAX_SHOOTS_TIME": 4,
         "MAX_START_AGGRESION_COEF": 3,
         "MIN_DAMAGE_SCARE": 20,
@@ -478,13 +478,13 @@
         "STANDART_AMBUSH_DIST": 100,
         "SUSPETION_POINT_CHANCE_ADD100": 0,
         "TIME_TO_FIND_ENEMY": 17.6,
-        "TIME_TO_FORGOR_ABOUT_ENEMY_SEC": 122.39999999999999,
+        "TIME_TO_FORGOR_ABOUT_ENEMY_SEC": 95,
         "TIME_TO_RUN_TO_COVER_CAUSE_SHOOT_SEC": 15,
         "WARN_BOT_TYPES": []
       },
       "Move": {
         "BASESTART_SLOW_DIST": 1.1,
-        "BASE_ROTATE_SPEED": 324.0,
+        "BASE_ROTATE_SPEED": 270,
         "BASE_SQRT_START_SERACH": 1225,
         "BASE_START_SERACH": 35,
         "CHANCE_TO_RUN_IF_NO_AMMO_0_100": 100,
@@ -756,7 +756,7 @@
         "ScatteringPerMeter": 0.045,
         "ShotgunFireDistancePref": 50,
         "VisibleAngle": 180.0,
-        "VisibleDistance": 300.0,
+        "VisibleDistance": 250,
         "WaitInCoverBetweenShotsSec": 1
       },
       "Cover": {
@@ -985,8 +985,8 @@
         "HOLD_IF_PROTECT_DELTA_LAST_TIME_SEEN": 8.5,
         "LASTSEEN_POINT_CHOOSE_COEF": 0.2,
         "LAST_ENEMY_LOOK_TO": 40,
-        "MAX_AGGRO_BOT_DIST": 360.0,
-        "MAX_AGGRO_BOT_DIST_SQR": 129600.0,
+        "MAX_AGGRO_BOT_DIST": 240,
+        "MAX_AGGRO_BOT_DIST_SQR": 57600,
         "MAX_SHOOTS_TIME": 4,
         "MAX_START_AGGRESION_COEF": 3,
         "MIN_DAMAGE_SCARE": 20,
@@ -1003,13 +1003,13 @@
         "STANDART_AMBUSH_DIST": 100,
         "SUSPETION_POINT_CHANCE_ADD100": 0,
         "TIME_TO_FIND_ENEMY": 17.6,
-        "TIME_TO_FORGOR_ABOUT_ENEMY_SEC": 122.39999999999999,
+        "TIME_TO_FORGOR_ABOUT_ENEMY_SEC": 95,
         "TIME_TO_RUN_TO_COVER_CAUSE_SHOOT_SEC": 15,
         "WARN_BOT_TYPES": []
       },
       "Move": {
         "BASESTART_SLOW_DIST": 1.1,
-        "BASE_ROTATE_SPEED": 324.0,
+        "BASE_ROTATE_SPEED": 270,
         "BASE_SQRT_START_SERACH": 1225,
         "BASE_START_SERACH": 35,
         "CHANCE_TO_RUN_IF_NO_AMMO_0_100": 100,
@@ -1281,7 +1281,7 @@
         "ScatteringPerMeter": 0.045,
         "ShotgunFireDistancePref": 50,
         "VisibleAngle": 180.0,
-        "VisibleDistance": 300.0,
+        "VisibleDistance": 250,
         "WaitInCoverBetweenShotsSec": 1
       },
       "Cover": {
@@ -1510,8 +1510,8 @@
         "HOLD_IF_PROTECT_DELTA_LAST_TIME_SEEN": 8.5,
         "LASTSEEN_POINT_CHOOSE_COEF": 0.2,
         "LAST_ENEMY_LOOK_TO": 40,
-        "MAX_AGGRO_BOT_DIST": 360.0,
-        "MAX_AGGRO_BOT_DIST_SQR": 129600.0,
+        "MAX_AGGRO_BOT_DIST": 240,
+        "MAX_AGGRO_BOT_DIST_SQR": 57600,
         "MAX_SHOOTS_TIME": 4,
         "MAX_START_AGGRESION_COEF": 3,
         "MIN_DAMAGE_SCARE": 20,
@@ -1528,13 +1528,13 @@
         "STANDART_AMBUSH_DIST": 100,
         "SUSPETION_POINT_CHANCE_ADD100": 0,
         "TIME_TO_FIND_ENEMY": 17.6,
-        "TIME_TO_FORGOR_ABOUT_ENEMY_SEC": 122.39999999999999,
+        "TIME_TO_FORGOR_ABOUT_ENEMY_SEC": 95,
         "TIME_TO_RUN_TO_COVER_CAUSE_SHOOT_SEC": 15,
         "WARN_BOT_TYPES": []
       },
       "Move": {
         "BASESTART_SLOW_DIST": 1.1,
-        "BASE_ROTATE_SPEED": 324.0,
+        "BASE_ROTATE_SPEED": 270,
         "BASE_SQRT_START_SERACH": 1225,
         "BASE_START_SERACH": 35,
         "CHANCE_TO_RUN_IF_NO_AMMO_0_100": 100,
@@ -1806,7 +1806,7 @@
         "ScatteringPerMeter": 0.045,
         "ShotgunFireDistancePref": 50,
         "VisibleAngle": 180.0,
-        "VisibleDistance": 300.0,
+        "VisibleDistance": 250,
         "WaitInCoverBetweenShotsSec": 1
       },
       "Cover": {
@@ -2035,8 +2035,8 @@
         "HOLD_IF_PROTECT_DELTA_LAST_TIME_SEEN": 8.5,
         "LASTSEEN_POINT_CHOOSE_COEF": 0.2,
         "LAST_ENEMY_LOOK_TO": 40,
-        "MAX_AGGRO_BOT_DIST": 360.0,
-        "MAX_AGGRO_BOT_DIST_SQR": 129600.0,
+        "MAX_AGGRO_BOT_DIST": 240,
+        "MAX_AGGRO_BOT_DIST_SQR": 57600,
         "MAX_SHOOTS_TIME": 4,
         "MAX_START_AGGRESION_COEF": 3,
         "MIN_DAMAGE_SCARE": 20,
@@ -2053,13 +2053,13 @@
         "STANDART_AMBUSH_DIST": 100,
         "SUSPETION_POINT_CHANCE_ADD100": 0,
         "TIME_TO_FIND_ENEMY": 17.6,
-        "TIME_TO_FORGOR_ABOUT_ENEMY_SEC": 122.39999999999999,
+        "TIME_TO_FORGOR_ABOUT_ENEMY_SEC": 95,
         "TIME_TO_RUN_TO_COVER_CAUSE_SHOOT_SEC": 15,
         "WARN_BOT_TYPES": []
       },
       "Move": {
         "BASESTART_SLOW_DIST": 1.1,
-        "BASE_ROTATE_SPEED": 324.0,
+        "BASE_ROTATE_SPEED": 270,
         "BASE_SQRT_START_SERACH": 1225,
         "BASE_START_SERACH": 35,
         "CHANCE_TO_RUN_IF_NO_AMMO_0_100": 100,
@@ -3545,8 +3545,8 @@
   "skills": {
     "Common": {
       "BotReload": {
-        "max": 4500,
-        "min": 4500
+        "max": 1800,
+        "min": 1800
       },
       "BotSound": {
         "max": 4500,
