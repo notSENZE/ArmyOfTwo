@@ -12,6 +12,7 @@ public sealed class ArmyOfTwoContent(
     MoreBotsCustomBotTypeService customBotTypeService,
     FactionService factionService,
     ReserveAmmoPatch reserveAmmoPatch,
+    MedicalLoadoutPatch medicalLoadoutPatch,
     WTTServerCommonLib.WTTServerCommonLib commonLib) : IOnLoad
 {
     public async Task OnLoadAsync(CancellationToken cancellationToken)
@@ -24,6 +25,7 @@ public sealed class ArmyOfTwoContent(
         await commonLib.CustomQuestService.CreateCustomQuests(assembly);
         await moreBots.LoadBots(assembly);
         reserveAmmoPatch.Start();
+        medicalLoadoutPatch.Start();
 
         customBotTypeService.AddCustomWildSpawnTypeNames(new Dictionary<int, string>
         {

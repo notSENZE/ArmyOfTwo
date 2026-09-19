@@ -99,7 +99,7 @@ public sealed class SpawnService(
             SpawnMode = ["regular", "pve"],
             Supports = [],
             Time = -1,
-            TriggerId = string.Empty,
+            TriggerId = "hunt",
             TriggerName = string.Empty
         });
 

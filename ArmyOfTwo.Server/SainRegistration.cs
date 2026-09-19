@@ -17,9 +17,9 @@ public sealed class SainRegistration(SainInteropRegistration sainInterop) : IOnL
             Name = "Rook",
             Section = "Army of Two",
             Description = "The aggressive leader of Army of Two.",
-            DifficultyModifier = 1.15f,
-            BaseBrain = "Knight",
-            BrainsToApply = ["Knight"]
+            DifficultyModifier = 1f,
+            BrainsToApply = ["PMC", "ExUsec"],
+            LayersToRemove = ["Request", "KnightFight", "PmcBear", "PmcUsec", "ExURequest", "StationaryWS"]
         });
 
         sainInterop.RegisterBotType(new MoreBotsSainBotTypeRegistration
@@ -29,9 +29,9 @@ public sealed class SainRegistration(SainInteropRegistration sainInterop) : IOnL
             Name = "Tombstone",
             Section = "Army of Two",
             Description = "Rook's ranged support specialist.",
-            DifficultyModifier = 1.1f,
-            BaseBrain = "BirdEye",
-            BrainsToApply = ["BirdEye"]
+            DifficultyModifier = 1f,
+            BrainsToApply = ["PMC", "ExUsec"],
+            LayersToRemove = ["Request", "KnightFight", "PmcBear", "PmcUsec", "ExURequest", "StationaryWS"]
         });
 
         return Task.CompletedTask;

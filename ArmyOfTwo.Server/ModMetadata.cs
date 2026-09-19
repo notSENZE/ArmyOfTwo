@@ -9,7 +9,7 @@ public record ModMetadata : IModMetadata
     public string Name { get; init; } = ModInfo.Name;
     public string Author { get; init; } = ModInfo.Author;
     public List<string>? Contributors { get; init; } = [];
-    public SemanticVersioning.Version Version { get; init; } = new(0, 9, 0, "beta.4", "");
+    public SemanticVersioning.Version Version { get; init; } = new(0, 9, 10);
     public Range SptVersion { get; init; } = new("~4.1.5");
     public List<string>? Incompatibilities { get; init; }
     public Dictionary<string, Range>? ModDependencies { get; init; } = new()

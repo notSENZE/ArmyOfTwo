@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>ArmyOfTwo.Client</AssemblyName>
+    <RootNamespace>ArmyOfTwo.Client</RootNamespace>
+    <Version>0.9.10</Version>
+    <LangVersion>11.0</LangVersion>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <SPTPath Condition="'$(SPTPath)' == ''">S:\SPT</SPTPath>
+    <PackageRoot>$(MSBuildProjectDirectory)\..\Build\BepInEx\plugins\ArmyOfTwo</PackageRoot>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp" Private="false">
+      <HintPath>$(SPTPath)\EscapeFromTarkov_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx" Private="false">
+      <HintPath>$(SPTPath)\BepInEx\core\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Comfort" Private="false">
+      <HintPath>$(SPTPath)\EscapeFromTarkov_Data\Managed\Comfort.dll</HintPath>
+    </Reference>
+    <Reference Include="DrakiaXYZ-BigBrain" Private="false">
+      <HintPath>$(SPTPath)\BepInEx\plugins\DrakiaXYZ-BigBrain.dll</HintPath>
+    </Reference>
+    <Reference Include="MoreBotsPlugin" Private="false">
+      <HintPath>$(SPTPath)\BepInEx\plugins\MoreBotsPlugin\MoreBotsPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="Sirenix.Serialization" Private="false">
+      <HintPath>$(SPTPath)\EscapeFromTarkov_Data\Managed\Sirenix.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine" Private="false">
+      <HintPath>$(SPTPath)\EscapeFromTarkov_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule" Private="false">
+      <HintPath>$(SPTPath)\EscapeFromTarkov_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule" Private="false">
+      <HintPath>$(SPTPath)\EscapeFromTarkov_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule" Private="false">
+      <HintPath>$(SPTPath)\EscapeFromTarkov_Data\Managed\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="BuildPackage" AfterTargets="Build">
+    <MakeDir Directories="$(PackageRoot)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(PackageRoot)" />
+  </Target>
+</Project>

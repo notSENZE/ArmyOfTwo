@@ -6,8 +6,7 @@ namespace ArmyOfTwo.Prepatch;
 
 public static class BotTypeRegistrationPatch
 {
-    private const int KnightBrain = 26;
-    private const int BirdeyeBrain = 28;
+    private const int PmcBrain = 9;
     private const int RookId = 658400;
     private const int TombstoneId = 658401;
 
@@ -29,7 +28,7 @@ public static class BotTypeRegistrationPatch
             RookId,
             "bossRook",
             "Boss",
-            KnightBrain,
+            PmcBrain,
             isBoss: true,
             isFollower: false,
             isHostileToEverybody: false);
@@ -43,7 +42,7 @@ public static class BotTypeRegistrationPatch
             TombstoneId,
             "followerTombstone",
             "Follower",
-            BirdeyeBrain,
+            PmcBrain,
             isBoss: false,
             isFollower: true,
             isHostileToEverybody: false);
