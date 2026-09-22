@@ -17,9 +17,9 @@ namespace ArmyOfTwo.Client;
 public sealed class Plugin : BaseUnityPlugin
 {
     public const string Guid = "spt.senze.armyoftwo";
-    public const string Version = "0.9.10";
-    private const int RookWildSpawnType = 658400;
-    private const int TombstoneWildSpawnType = 658401;
+    public const string Version = "0.10.4";
+    internal const int RookWildSpawnType = 658400;
+    internal const int TombstoneWildSpawnType = 658401;
 
     private ConfigEntry<bool> _enableTripwires;
     private HuntManager _huntManager;
@@ -50,6 +50,7 @@ public sealed class Plugin : BaseUnityPlugin
         _huntManager.AddHuntSides(armyRoles, new List<EPlayerSide> { EPlayerSide.Usec, EPlayerSide.Bear });
         _huntManager.OnBotHuntInit += OnBotHuntInit;
         BrainManager.AddCustomLayer(typeof(CombatAwareHuntLayer), brains, 10, armyRoles);
+        BrainManager.AddCustomLayer(typeof(VendettaDirectHuntLayer), brains, 25, armyRoles);
 
         BrainManager.AddCustomLayer(typeof(ArmySurgeryLayer), brains, 75, armyRoles);
 
@@ -58,7 +59,8 @@ public sealed class Plugin : BaseUnityPlugin
             brains,
             74,
             new List<WildSpawnType> { (WildSpawnType)TombstoneWildSpawnType });
-        Logger.LogInfo($"Army of Two {Version}: group hunt, safe surgery, and Tombstone tripwires registered.");
+        Logger.LogInfo(
+            $"Army of Two {Version}: group hunt, vendetta tracking, safe surgery, and Tombstone tripwires registered.");
     }
 
     private void OnDestroy()
@@ -69,6 +71,7 @@ public sealed class Plugin : BaseUnityPlugin
         }
         TombstoneTripwireState.Reset();
         ArmySurgeryState.Reset();
+        VendettaClientBridge.Reset();
         Instance = null;
         Log = null;
     }
@@ -88,6 +91,16 @@ public sealed class Plugin : BaseUnityPlugin
             avoidance = bot.gameObject.AddComponent<TombstoneTripwireAvoidance>();
         }
         avoidance.Init(bot);
+
+        var boss = role == RookWildSpawnType ? "rook" : "tombstone";
+        var tracker = bot.GetComponent<VendettaBotTracker>();
+        if (tracker == null)
+        {
+            tracker = bot.gameObject.AddComponent<VendettaBotTracker>();
+        }
+        tracker.Init(bot, boss);
+
+        VendettaClientBridge.AssignLocalPlayer(_huntManager, manager);
 
         if (role == TombstoneWildSpawnType)
         {

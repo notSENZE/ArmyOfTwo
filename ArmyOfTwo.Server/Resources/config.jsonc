@@ -1,6 +1,8 @@
 {
   "spawns": {
     "enabled": true,
+    "directHuntEnabled": true,
+    "heatLimit": 30,
     "maps": {
       "bigmap": {
         "enabled": true,

@@ -19,7 +19,7 @@ public sealed class SpawnService(
         return Task.CompletedTask;
     }
 
-    public void Apply(SpawnConfig config)
+    public void Apply(SpawnConfig config, string? forcedMap = null)
     {
         RemoveExistingSpawns();
 
@@ -31,8 +31,18 @@ public sealed class SpawnService(
 
         foreach (var entry in config.Maps.Where(entry => entry.Value.Enabled))
         {
-            AddSpawn(entry.Key, entry.Value);
+            AddSpawn(entry.Key, entry.Value, IsSameMap(entry.Key, forcedMap));
         }
+    }
+
+    public bool IsMapEnabled(SpawnConfig config, string? mapName)
+    {
+        if (!config.Enabled || string.IsNullOrWhiteSpace(mapName))
+        {
+            return false;
+        }
+
+        return config.Maps.Any(entry => entry.Value.Enabled && IsSameMap(entry.Key, mapName));
     }
 
     private void RemoveExistingSpawns()
@@ -46,7 +56,7 @@ public sealed class SpawnService(
         }
     }
 
-    private void AddSpawn(string mapName, MapSpawnConfig mapConfig)
+    private void AddSpawn(string mapName, MapSpawnConfig mapConfig, bool forceSpawn)
     {
         var locationKey = locationTable.GetMappedKey(mapName);
         if (!locationTable.GetDictionary().TryGetValue(locationKey, out var location))
@@ -81,7 +91,7 @@ public sealed class SpawnService(
             return;
         }
 
-        var chance = Math.Clamp(mapConfig.Chance, 0, 100);
+        var chance = forceSpawn ? 100 : Math.Clamp(mapConfig.Chance, 0, 100);
         spawns.Add(new BossLocationSpawn
         {
             BossName = ModInfo.RookBotKey,
@@ -93,7 +103,7 @@ public sealed class SpawnService(
             IsBossPlayer = false,
             BossZone = string.Join(',', zones),
             Delay = 0,
-            ForceSpawn = chance >= 100,
+            ForceSpawn = forceSpawn || chance >= 100,
             IgnoreMaxBots = true,
             IsRandomTimeSpawn = false,
             SpawnMode = ["regular", "pve"],
@@ -105,7 +115,21 @@ public sealed class SpawnService(
 
         logger.Info(
             $"Army of Two: configured Rook and Tombstone on '{mapName}' " +
-            $"across {zones.Count} zone(s) with a {chance}% spawn chance.");
+            $"across {zones.Count} zone(s) with a {chance}% spawn chance" +
+            (forceSpawn ? " for the active vendetta hunt." : "."));
+    }
+
+    private bool IsSameMap(string configuredMap, string? requestedMap)
+    {
+        if (string.IsNullOrWhiteSpace(requestedMap))
+        {
+            return false;
+        }
+
+        return string.Equals(
+            locationTable.GetMappedKey(configuredMap),
+            locationTable.GetMappedKey(requestedMap),
+            StringComparison.OrdinalIgnoreCase);
     }
 
     private static List<string> GetEnabledZones(MapSpawnConfig mapConfig)

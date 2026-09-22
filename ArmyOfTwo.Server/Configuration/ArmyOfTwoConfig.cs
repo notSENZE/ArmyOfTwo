@@ -16,6 +16,12 @@ public sealed class SpawnConfig
     [JsonPropertyName("enabled")]
     public bool Enabled { get; set; } = true;
 
+    [JsonPropertyName("directHuntEnabled")]
+    public bool DirectHuntEnabled { get; set; } = true;
+
+    [JsonPropertyName("heatLimit")]
+    public int HeatLimit { get; set; } = 30;
+
     [JsonPropertyName("maps")]
     public Dictionary<string, MapSpawnConfig> Maps { get; set; } =
         new(StringComparer.OrdinalIgnoreCase);

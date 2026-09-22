@@ -14,7 +14,8 @@ public sealed class TombstoneTripwireLayer : CustomLayer
 
     public override bool IsActive()
     {
-        if (!Plugin.TripwiresEnabled || BotOwner == null || BotOwner.IsDead)
+        if (!Plugin.TripwiresEnabled || VendettaClientBridge.DirectHuntActive ||
+            BotOwner == null || BotOwner.IsDead)
         {
             return false;
         }
@@ -107,7 +108,7 @@ public sealed class TombstoneTripwireLayer : CustomLayer
 
     public override bool IsCurrentActionEnding()
     {
-        if (BotOwner == null || BotOwner.IsDead)
+        if (VendettaClientBridge.DirectHuntActive || BotOwner == null || BotOwner.IsDead)
         {
             return true;
         }

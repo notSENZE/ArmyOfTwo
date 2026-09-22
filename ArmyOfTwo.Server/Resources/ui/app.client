@@ -8,6 +8,17 @@ document.getElementById("globalEnabled").addEventListener("change", event => {
   updateSummary();
 });
 
+document.getElementById("directHuntEnabled").addEventListener("change", event => {
+  state.config.directHuntEnabled = event.target.checked;
+  updateSummary();
+});
+
+document.getElementById("heatLimit").addEventListener("input", event => {
+  state.config.heatLimit = clampHeat(event.target.value);
+  event.target.value = state.config.heatLimit;
+  updateSummary();
+});
+
 document.getElementById("reload").addEventListener("click", load);
 document.getElementById("save").addEventListener("click", save);
 document.getElementById("mapSearch").addEventListener("input", event => {
@@ -20,6 +31,11 @@ document.getElementById("mapSearch").addEventListener("input", event => {
 function clamp(value) {
   const number = Number(value);
   return Math.max(0, Math.min(100, Number.isFinite(number) ? Math.round(number) : 0));
+}
+
+function clampHeat(value) {
+  const number = Number(value);
+  return Math.max(10, Math.min(100, Number.isFinite(number) ? Math.round(number) : 30));
 }
 
 function normalizeMap(map, fieldMap, isNew) {
@@ -43,6 +59,8 @@ function normalizeMap(map, fieldMap, isNew) {
 }
 
 function hydrateConfig() {
+  state.config.directHuntEnabled ??= true;
+  state.config.heatLimit = clampHeat(state.config.heatLimit ?? 30);
   state.config.maps ||= {};
   state.field.maps.forEach(fieldMap => {
     const isNew = !state.config.maps[fieldMap.id];
@@ -160,7 +178,7 @@ function updateSummary() {
   const maps = Object.values(state.config.maps || {});
   const active = maps.filter(map => map.enabled).length;
   document.getElementById("summary").textContent = state.config.enabled
-    ? `${active} active assignment${active === 1 ? "" : "s"}`
+    ? `${active} active assignment${active === 1 ? "" : "s"} · Hunting Mode ${state.config.directHuntEnabled ? "armed" : "disabled"} · Heat ${state.config.heatLimit}`
     : "All deployments suspended";
 }
 
@@ -182,6 +200,8 @@ async function load() {
     hydrateConfig();
     document.getElementById("version").textContent = `v${state.field.version}`;
     document.getElementById("globalEnabled").checked = state.config.enabled;
+    document.getElementById("directHuntEnabled").checked = state.config.directHuntEnabled;
+    document.getElementById("heatLimit").value = state.config.heatLimit;
     document.getElementById("connection").classList.add("online");
     document.getElementById("connection").lastChild.textContent = " Online";
     renderOperators();

@@ -4,5 +4,5 @@ internal static class ModInfo
 {
     public const string Guid = "spt.senze.armyoftwo";
     public const string Name = "Army of Two Prepatch";
-    public const string Version = "0.9.10";
+    public const string Version = "0.10.4";
 }

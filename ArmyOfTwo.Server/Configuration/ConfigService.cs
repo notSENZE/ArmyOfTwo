@@ -108,6 +108,7 @@ public sealed class ConfigService(ModHelper modHelper)
 
     private static void Normalize(SpawnConfig config)
     {
+        config.HeatLimit = Math.Clamp(config.HeatLimit, 10, 100);
         var normalizedMaps = new Dictionary<string, MapSpawnConfig>(StringComparer.OrdinalIgnoreCase);
 
         foreach (var entry in config.Maps)

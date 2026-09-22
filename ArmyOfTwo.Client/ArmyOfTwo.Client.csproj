@@ -3,7 +3,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>ArmyOfTwo.Client</AssemblyName>
     <RootNamespace>ArmyOfTwo.Client</RootNamespace>
-    <Version>0.9.10</Version>
+    <Version>0.10.4</Version>
     <LangVersion>11.0</LangVersion>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>disable</Nullable>
@@ -24,8 +24,17 @@
     <Reference Include="DrakiaXYZ-BigBrain" Private="false">
       <HintPath>$(SPTPath)\BepInEx\plugins\DrakiaXYZ-BigBrain.dll</HintPath>
     </Reference>
+    <Reference Include="DissonanceVoip" Private="false">
+      <HintPath>$(SPTPath)\EscapeFromTarkov_Data\Managed\DissonanceVoip.dll</HintPath>
+    </Reference>
     <Reference Include="MoreBotsPlugin" Private="false">
       <HintPath>$(SPTPath)\BepInEx\plugins\MoreBotsPlugin\MoreBotsPlugin.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json" Private="false">
+      <HintPath>$(SPTPath)\EscapeFromTarkov_Data\Managed\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="spt-common" Private="false">
+      <HintPath>$(SPTPath)\BepInEx\plugins\spt\spt-common.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Serialization" Private="false">
       <HintPath>$(SPTPath)\EscapeFromTarkov_Data\Managed\Sirenix.Serialization.dll</HintPath>

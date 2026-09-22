@@ -21,11 +21,22 @@
     <section id="operators" class="operators" aria-label="Operator roster"></section>
 
     <section class="command-bar">
-      <label class="master-switch">
-        <input id="globalEnabled" type="checkbox">
-        <span class="switch-ui"></span>
-        <span><b>Squad deployment</b><small>Master control for all maps</small></span>
-      </label>
+      <div class="command-options">
+        <label class="master-switch">
+          <input id="globalEnabled" type="checkbox">
+          <span class="switch-ui"></span>
+          <span><b>Squad deployment</b><small>Master control for all maps</small></span>
+        </label>
+        <label class="master-switch vendetta-switch">
+          <input id="directHuntEnabled" type="checkbox">
+          <span class="switch-ui"></span>
+          <span><b>Hunting Mode</b><small>Marked raids track the local player</small></span>
+        </label>
+        <label class="heat-setting">
+          <span><b>Heat limit</b><small>Marks the player after raid evaluation</small></span>
+          <input id="heatLimit" type="number" min="10" max="100" step="1">
+        </label>
+      </div>
       <div class="command-actions">
         <label class="search"><span>⌕</span><input id="mapSearch" type="search" placeholder="Filter maps"></label>
         <button id="reload" class="button ghost">Discard changes</button>
