@@ -17,7 +17,7 @@ namespace ArmyOfTwo.Client;
 public sealed class Plugin : BaseUnityPlugin
 {
     public const string Guid = "spt.senze.armyoftwo";
-    public const string Version = "0.10.4";
+    public const string Version = "0.10.6";
     internal const int RookWildSpawnType = 658400;
     internal const int TombstoneWildSpawnType = 658401;
 

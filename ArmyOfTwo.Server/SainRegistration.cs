@@ -17,7 +17,7 @@ public sealed class SainRegistration(SainInteropRegistration sainInterop) : IOnL
             Name = "Rook",
             Section = "Army of Two",
             Description = "The aggressive leader of Army of Two.",
-            DifficultyModifier = 1f,
+            DifficultyModifier = 0.95f,
             BrainsToApply = ["PMC", "ExUsec"],
             LayersToRemove = ["Request", "KnightFight", "PmcBear", "PmcUsec", "ExURequest", "StationaryWS"]
         });
@@ -29,7 +29,7 @@ public sealed class SainRegistration(SainInteropRegistration sainInterop) : IOnL
             Name = "Tombstone",
             Section = "Army of Two",
             Description = "Rook's ranged support specialist.",
-            DifficultyModifier = 1f,
+            DifficultyModifier = 0.9f,
             BrainsToApply = ["PMC", "ExUsec"],
             LayersToRemove = ["Request", "KnightFight", "PmcBear", "PmcUsec", "ExURequest", "StationaryWS"]
         });

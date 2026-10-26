@@ -11,7 +11,7 @@ public sealed class SainPersonalityRegistration(SainConfigService sainConfigServ
     public Task OnLoadAsync(CancellationToken cancellationToken)
     {
         var personalities = sainConfigService.NicknamesModel.NicknamePersonalities;
-        personalities["Rook"] = EPersonality.GigaChad;
+        personalities["Rook"] = EPersonality.Chad;
         personalities["Tombstone"] = EPersonality.SnappingTurtle;
 
         return Task.CompletedTask;

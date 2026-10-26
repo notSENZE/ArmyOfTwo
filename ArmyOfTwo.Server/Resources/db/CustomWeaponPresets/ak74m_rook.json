@@ -1,0 +1,144 @@
+{
+  "a20f00000000000000000601": {
+    "_changeWeaponName": true,
+    "_encyclopedia": "5ac4cd105acfc40016339859",
+    "_id": "a20f00000000000000000601",
+    "_items": [
+      {
+        "_id": "a20f00000000000000000610",
+        "_tpl": "5ac4cd105acfc40016339859",
+        "upd": {
+          "Repairable": {
+            "Durability": 100,
+            "MaxDurability": 100
+          },
+          "FireMode": {
+            "FireMode": "single"
+          },
+          "Foldable": {
+            "Folded": false
+          }
+        }
+      },
+      {
+        "_id": "a20f00000000000000000611",
+        "_tpl": "59c6633186f7740cf0493bb9",
+        "parentId": "a20f00000000000000000610",
+        "slotId": "mod_gas_block"
+      },
+      {
+        "_id": "a20f00000000000000000612",
+        "_tpl": "615d8f5dd92c473c770212ef",
+        "parentId": "a20f00000000000000000610",
+        "slotId": "mod_muzzle"
+      },
+      {
+        "_id": "a20f00000000000000000613",
+        "_tpl": "5649ae4a4bdc2d1b2b8b4588",
+        "parentId": "a20f00000000000000000610",
+        "slotId": "mod_pistol_grip"
+      },
+      {
+        "_id": "a20f00000000000000000614",
+        "_tpl": "5649af884bdc2d1b2b8b4589",
+        "parentId": "a20f00000000000000000610",
+        "slotId": "mod_reciever"
+      },
+      {
+        "_id": "a20f00000000000000000615",
+        "_tpl": "628a7b23b0f75035732dd565",
+        "parentId": "a20f00000000000000000610",
+        "slotId": "mod_sight_rear",
+        "upd": {
+          "Sight": {
+            "ScopesCurrentCalibPointIndexes": [
+              0
+            ],
+            "ScopesSelectedModes": [
+              0
+            ],
+            "SelectedScope": 0,
+            "ScopeZoomValue": 0
+          }
+        }
+      },
+      {
+        "_id": "a20f00000000000000000616",
+        "_tpl": "5ac78eaf5acfc4001926317a",
+        "parentId": "a20f00000000000000000610",
+        "slotId": "mod_stock"
+      },
+      {
+        "_id": "a20f00000000000000000617",
+        "_tpl": "5aaa4194e5b5b055d06310a5",
+        "parentId": "a20f00000000000000000610",
+        "slotId": "mod_magazine"
+      },
+      {
+        "_id": "a20f00000000000000000618",
+        "_tpl": "6130ca3fd92c473c77020dbd",
+        "parentId": "a20f00000000000000000610",
+        "slotId": "mod_charge"
+      },
+      {
+        "_id": "a20f00000000000000000619",
+        "_tpl": "5648b4534bdc2d3d1c8b4580",
+        "parentId": "a20f00000000000000000611",
+        "slotId": "mod_handguard"
+      },
+      {
+        "_id": "a20f0000000000000000061a",
+        "_tpl": "615d8f8567085e45ef1409ca",
+        "parentId": "a20f00000000000000000612",
+        "slotId": "mod_muzzle"
+      },
+      {
+        "_id": "a20f0000000000000000061b",
+        "_tpl": "655f13e0a246670fb0373245",
+        "parentId": "a20f00000000000000000614",
+        "slotId": "mod_scope",
+        "upd": {
+          "Sight": {
+            "ScopesCurrentCalibPointIndexes": [
+              0,
+              0
+            ],
+            "ScopesSelectedModes": [
+              0,
+              0
+            ],
+            "SelectedScope": 0,
+            "ScopeZoomValue": 0
+          }
+        }
+      },
+      {
+        "_id": "a20f0000000000000000061c",
+        "_tpl": "59ecc3dd86f7746dc827481c",
+        "parentId": "a20f00000000000000000616",
+        "slotId": "mod_stock"
+      },
+      {
+        "_id": "a20f0000000000000000061d",
+        "_tpl": "5c1bc5612e221602b5429350",
+        "parentId": "a20f00000000000000000619",
+        "slotId": "mod_foregrip"
+      },
+      {
+        "_id": "a20f0000000000000000061e",
+        "_tpl": "5c5952732e2216398b5abda2",
+        "parentId": "a20f00000000000000000619",
+        "slotId": "mod_scope",
+        "upd": {
+          "Light": {
+            "IsActive": true,
+            "SelectedMode": 0
+          }
+        }
+      }
+    ],
+    "_name": "AK-74M Rook",
+    "_parent": "a20f00000000000000000610",
+    "_type": "Preset"
+  }
+}
